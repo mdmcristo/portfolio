@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Shop</title>
+    <link rel="preload" href="fonts/CormorantGaramond-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-Light.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/CormorantGaramond-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-Light.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-Bold.woff" as="font" type="font/woff" crossorigin>
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="libs/swiper.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- HEADER -->
+        <header class="header">
+            <div class="header__stright">
+                <div class="swiper-wrapper header__stright-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#" class="header__stright-item">24/7 CUSTOMER SERVICE</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="header__stright-item">LIFETIME WARRANTY</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="header__stright-item">FREE INTERNATIONAL SHIPPING</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="header__stright-item">100% MONEY BACK GUARANTEE</a>
+                    </div>
+                </div>
+            </div>
+            <div class="header__top">
+                <div class="container header__top-container">
+                    <button class="icon-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="header__top-column header__top-column_communication" data-da="menu-mobile__body-contact,0,1024">
+                        <div class="header__top-item phone">
+                            <a href="tel:+14123149060" class="header__top-item-link" title="Phone">
+                                <img class="header__top-item-link_img" src="img/header_icons/phone.svg" alt="Phone">
+                                <span class="header__top-item-link_text">+1-412-314-9060</span>
+                            </a>
+                        </div>
+                        <div class="header__top-item chat">
+                            <a href="#" class="header__top-item-link" title="Chat">
+                                <img class="header__top-item-link_img" src="img/header_icons/chat.svg" alt="Chat">
+                            </a>
+                        </div>
+                        <div class="header__top-item envelope">
+                            <a href="#" class="header__top-item-link" title="Email">
+                                <img class="header__top-item-link_img" src="img/header_icons/envelope.svg" alt="Envelope">
+                            </a>
+                        </div>
+                        <div class="header__top-item appointment">
+                            <a href="#" class="header__top-item-link" title="Imac">
+                                <img class="header__top-item-link_img" src="img/header_icons/imac.svg" alt="Imac">
+                                <span class="header__top-item-link_text">Virtual appointment</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header__top-logo">
+                        <a class="header__top-logo-link" href="#">
+                            <img src="img/header_icons/Logo.png" alt="logo_top">
+                        </a>
+                    </div>
+                    <div class="header__top-column header__top-column_stat">
+                        <div class="header__top-item login">
+                            <a href="#" class="header__top-item-link">
+                                <img class="header__top-item-link_img" src="img/header_icons/user.svg" alt="User">
+                                <span class="header__top-item-link_text">Login</span>
+                            </a>
+                        </div>
+                        <div class="header__top-item like">
+                            <a href="#" class="header__top-item-link">
+                                <img class="header__top-item-link_img" src="img/header_icons/heart.svg" alt="Heart">
+                                <span class="header__top-item-link_text">Wish list</span>
+                                <span class="header__top-item-link_count">0</span>
+                            </a>
+                        </div>
+                        <div class="header__top-item cart">
+                            <a href="#" class="header__top-item-link">
+                                <img class="header__top-item-link_img" src="img/header_icons/cart.svg" alt="Heart">
+                                <span class="header__top-item-link_text">My cart</span>
+                                <span class="header__top-item-link_count">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <div class="container header__bottom-container">
+                    <nav class="header__bottom-nav nav-header" data-da="menu-mobile__body-content,0,1024">
+                        <ul class="nav-header__list">
+                            <li class="nav-header__list-item">
+                                <a class="nav-header__list-item-link btn-pulse" href="#"><span>Engagement rings</span> <span class="spoller-btn"></span></a>
+                                <div class="menu">
+                                    <div class="container menu-container">
+                                        <div class="menu__column">
+                                            <div class="menu__row">
+                                                <div class="menu__subtitle">Design your own engagement ring</div>
+                                                <ul class="menu__sublist">
+                                                    <li class="menu__sublist-item">
+                                                        <a href="catalog.html" class="menu__sublist-item-link">
+                                                            <img class="menu__sublist-item-link_img" src="img/menu_icons/1.png" alt="1">
+                                                            <span class="menu__sublist-item-link_text">Start With A Setting</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu__sublist-item">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <img class="menu__sublist-item-link_img" src="img/menu_icons/2.png" alt="2">
+                                                            <span class="menu__sublist-item-link_text">Start With A Diamond</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu__sublist-item">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <img class="menu__sublist-item-link_img" src="img/menu_icons/3.png" alt="3">
+                                                            <span class="menu__sublist-item-link_text">Start With A Lab-Created Diamond</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="menu__row">
+                                                <div class="menu__subtitle menu__subtitle">Get inspired by customer's rings</div>
+                                                <ul class="menu__sublist">
+                                                    <li class="menu__sublist-item menu__sublist-item_wi">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <span class="menu__sublist-item-link_text">Round Cut Rings</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu__sublist-item menu__sublist-item_wi">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <span class="menu__sublist-item-link_text">Princess Cut Rings</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu__sublist-item menu__sublist-item_wi">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <span class="menu__sublist-item-link_text">Cushion Cut Rings</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu__sublist-item menu__sublist-item_wi">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <span class="menu__sublist-item-link_text">All Diamond Engagement Rings</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="menu__column">
+                                            <div class="menu__subtitle">Engagement ring styles</div>
+                                            <ul class="menu__sublist">
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/4.png" alt="4">
+                                                        <span class="menu__sublist-item-link_text">Solitaire</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/5.png" alt="5">
+                                                        <span class="menu__sublist-item-link_text">Pavé</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/6.png" alt="6">
+                                                        <span class="menu__sublist-item-link_text">Channel-Set</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/7.png" alt="7">
+                                                        <span class="menu__sublist-item-link_text">Side-Stone</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/8.png" alt="8">
+                                                        <span class="menu__sublist-item-link_text">Tension</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/9.png" alt="9">
+                                                        <span class="menu__sublist-item-link_text">Vintage</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/9.png" alt="9">
+                                                        <span class="menu__sublist-item-link_text">Vintage</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/10.png" alt="10">
+                                                        <span class="menu__sublist-item-link_text">Halo</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/11.png" alt="11">
+                                                        <span class="menu__sublist-item-link_text">Three-Stone</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="menu__column">
+                                            <div class="menu__subtitle">Shop by metal</div>
+                                            <ul class="menu__sublist">
+                                                <li class="menu__sublist-item">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/12.png" alt="12">
+                                                        <span class="menu__sublist-item-link_text">Rose Gold</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/13.png" alt="13">
+                                                        <span class="menu__sublist-item-link_text">White Gold</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/14.png" alt="14">
+                                                        <span class="menu__sublist-item-link_text">Yellow Gold</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="menu__column menu__column_img">
+                                            <a href="#" title="12121"><img src="img/menu_icons/image1.jpg" alt="image1"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-header__list-item">
+                                <a class="nav-header__list-item-link btn-pulse" href="#"><span>Wedding rings</span><span class="spoller-btn"></span></a>
+                                <div class="menu">
+                                    <div class="container menu-container">
+                                        <div class="menu__column">
+                                            <div class="menu__row">
+                                                <div class="menu__subtitle">Design your own engagement ring</div>
+                                                <ul class="menu__sublist">
+                                                    <li class="menu__sublist-item">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <img class="menu__sublist-item-link_img" src="img/menu_icons/1.png" alt="1">
+                                                            <span class="menu__sublist-item-link_text">Start With A Setting</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu__sublist-item">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <img class="menu__sublist-item-link_img" src="img/menu_icons/2.png" alt="2">
+                                                            <span class="menu__sublist-item-link_text">Start With A Diamond</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu__sublist-item">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <img class="menu__sublist-item-link_img" src="img/menu_icons/3.png" alt="3">
+                                                            <span class="menu__sublist-item-link_text">Start With A Lab-Created Diamond</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="menu__row">
+                                                <div class="menu__subtitle menu__subtitle">Get inspired by customer's rings</div>
+                                                <ul class="menu__sublist">
+                                                    <li class="menu__sublist-item menu__sublist-item_wi">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <span class="menu__sublist-item-link_text">Round Cut Rings</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu__sublist-item menu__sublist-item_wi">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <span class="menu__sublist-item-link_text">Princess Cut Rings</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu__sublist-item menu__sublist-item_wi">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <span class="menu__sublist-item-link_text">Cushion Cut Rings</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu__sublist-item menu__sublist-item_wi">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <span class="menu__sublist-item-link_text">All Diamond Engagement Rings</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="menu__column">
+                                            <div class="menu__subtitle">Engagement ring styles</div>
+                                            <ul class="menu__sublist">
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/4.png" alt="4">
+                                                        <span class="menu__sublist-item-link_text">Solitaire</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/5.png" alt="5">
+                                                        <span class="menu__sublist-item-link_text">Pavé</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/6.png" alt="6">
+                                                        <span class="menu__sublist-item-link_text">Channel-Set</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/7.png" alt="7">
+                                                        <span class="menu__sublist-item-link_text">Side-Stone</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/8.png" alt="8">
+                                                        <span class="menu__sublist-item-link_text">Tension</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/9.png" alt="9">
+                                                        <span class="menu__sublist-item-link_text">Vintage</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/9.png" alt="9">
+                                                        <span class="menu__sublist-item-link_text">Vintage</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/10.png" alt="10">
+                                                        <span class="menu__sublist-item-link_text">Halo</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/11.png" alt="11">
+                                                        <span class="menu__sublist-item-link_text">Three-Stone</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="menu__column">
+                                            <div class="menu__subtitle">Shop by metal</div>
+                                            <ul class="menu__sublist">
+                                                <li class="menu__sublist-item">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/12.png" alt="12">
+                                                        <span class="menu__sublist-item-link_text">Rose Gold</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/13.png" alt="13">
+                                                        <span class="menu__sublist-item-link_text">White Gold</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/14.png" alt="14">
+                                                        <span class="menu__sublist-item-link_text">Yellow Gold</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="menu__column menu__column_img">
+                                            <a href="#" title="12121"><img src="img/shop/sl3.jpg" alt="image1"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-header__list-item">
+                                <a class="nav-header__list-item-link btn-pulse" href="#"><span>Diamonds</span> <span class="spoller-btn"></span></a>
+                                <div class="menu">
+                                    <div class="container menu-container">
+                                        <div class="menu__column">
+                                            <div class="menu__row">
+                                                <div class="menu__subtitle">Design your own engagement ring</div>
+                                                <ul class="menu__sublist">
+                                                    <li class="menu__sublist-item">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <img class="menu__sublist-item-link_img" src="img/menu_icons/1.png" alt="1">
+                                                            <span class="menu__sublist-item-link_text">Start With A Setting</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu__sublist-item">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <img class="menu__sublist-item-link_img" src="img/menu_icons/2.png" alt="2">
+                                                            <span class="menu__sublist-item-link_text">Start With A Diamond</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu__sublist-item">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <img class="menu__sublist-item-link_img" src="img/menu_icons/3.png" alt="3">
+                                                            <span class="menu__sublist-item-link_text">Start With A Lab-Created Diamond</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="menu__row">
+                                                <div class="menu__subtitle menu__subtitle">Get inspired by customer's rings</div>
+                                                <ul class="menu__sublist">
+                                                    <li class="menu__sublist-item menu__sublist-item_wi">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <span class="menu__sublist-item-link_text">Round Cut Rings</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu__sublist-item menu__sublist-item_wi">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <span class="menu__sublist-item-link_text">Princess Cut Rings</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu__sublist-item menu__sublist-item_wi">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <span class="menu__sublist-item-link_text">Cushion Cut Rings</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu__sublist-item menu__sublist-item_wi">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <span class="menu__sublist-item-link_text">All Diamond Engagement Rings</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="menu__column">
+                                            <div class="menu__subtitle">Engagement ring styles</div>
+                                            <ul class="menu__sublist">
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/4.png" alt="4">
+                                                        <span class="menu__sublist-item-link_text">Solitaire</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/5.png" alt="5">
+                                                        <span class="menu__sublist-item-link_text">Pavé</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/6.png" alt="6">
+                                                        <span class="menu__sublist-item-link_text">Channel-Set</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/7.png" alt="7">
+                                                        <span class="menu__sublist-item-link_text">Side-Stone</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/8.png" alt="8">
+                                                        <span class="menu__sublist-item-link_text">Tension</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/9.png" alt="9">
+                                                        <span class="menu__sublist-item-link_text">Vintage</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/9.png" alt="9">
+                                                        <span class="menu__sublist-item-link_text">Vintage</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/10.png" alt="10">
+                                                        <span class="menu__sublist-item-link_text">Halo</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/11.png" alt="11">
+                                                        <span class="menu__sublist-item-link_text">Three-Stone</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="menu__column">
+                                            <div class="menu__subtitle">Shop by metal</div>
+                                            <ul class="menu__sublist">
+                                                <li class="menu__sublist-item">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/12.png" alt="12">
+                                                        <span class="menu__sublist-item-link_text">Rose Gold</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/13.png" alt="13">
+                                                        <span class="menu__sublist-item-link_text">White Gold</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/14.png" alt="14">
+                                                        <span class="menu__sublist-item-link_text">Yellow Gold</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="menu__column menu__column_img">
+                                            <a href="#" title="12121"><img src="img/shop/sl4.jpg" alt="image1"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header__bottom-info" data-da="menu-mobile__body-content,1,1024">
+                        <ul class="header__bottom-info-list">
+                            <li class="header__bottom-info-list-item"><a class="header__bottom-info-list-item-link btn-pulse" href="#"><span>Education</span></a></li>
+                            <li class="header__bottom-info-list-item"><a class="header__bottom-info-list-item-link btn-pulse" href="#"><span>Faq</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="header__bottom-search">
+                        <form class="header__bottom-search-form form-search" action="#">
+                            <input class="input form-search__input" type="text" placeholder="Search">
+                            <button class=" form-search__submit"><img src="img/header_icons/search.svg" alt="search"></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="menu-mobile">
+            <div class="menu-mobile__body">
+                <div class="menu-mobile__body-head">
+                    <div class="menu-mobile__body-head-row menu-mobile__body-head-row_menuclose">
+                        <a class="menu-mobile__body-login" href="#">
+                            <span><img src="img/header_icons/user.svg" alt="User"></span>Login / Sign up
+                        </a>
+                        <button class="icon-menu active menu-mobile-close">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                    <div class="menu-mobile__body-head-row">
+                        <div class="menu-mobile__body-search">
+                            <form class="menu-mobile__body-search-form form-search" action="#">
+                                <input class="input form-search__input" type="text" placeholder="Search Dee Dee">
+                                <button class=" form-search__submit"><img src="img/header_icons/search.svg" alt="search"></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-mobile__body-content"></div>
+                <div class="menu-mobile__body-contact">
+                    <div class="menu-mobile__body-contact-title">Contact Us</div>
+                </div>
+                <div class="menu-mobile__body-copyright">
+                    <span>&#169; 2020 Diamond Shop. All Right Reserved</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- BANNER -->
+        <div class="stright">
+            Design your engagement ring your way
+        </div>
+
+        <!-- WELCOME -->
+        <section class="section welcome welcome_land lazy-background" data-bg="img/welcome/2.jpg">
+            <!-- BREADCRUMB -->
+            <div class="breadcrumbs breadcrumbs_abs">
+                <div class="container breadcrumbs__container">
+                    <ul class="breadcrumbs__list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#" class="current">Diamonds</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container section-welcome__container">
+                <div class="welcome__content welcome__content_land">
+                    <div class="welcome__title welcome__title_land">
+                        LOOSE DIAMONDS IN&nbsp;360°&nbsp;HD
+                    </div>
+                    <p class="welcome__text welcome__text_land">
+                        A certificate tells a small part of the story, but seeing a loose diamond in 40x superzoom lets you really get to know your diamond.  Design your engagement ring with the perfect loose diamond.
+                    </p>
+                    <div class="welcome__buttons">
+                        <a href="#" class="welcome__button welcome__button_land">Earth-Created Diamonds</a>
+                        <a href="#" class="welcome__button welcome__button_land">Lab-Created Diamonds</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPLORE -->
+        <section class="section_md explore">
+            <div class="container explore__container">
+                <div class="title  explore__title">EXPLORE LOOSE DIAMONDS</div>
+                <div class="explore__slider swiper-container">
+                    <div class="swiper-wrapper">
+                        <a href="#" class="explore__slider-item explore-slide swiper-slide">
+                            <span class="explore-slide__image">
+                                <img class="load-image" data-src="img/explore/1.png" src="data:image/gif;base64,R0lGODlhAQDQAIAAAP///wAAACH5BAEAAAEALAAAAAABANAAAAIMjI+py+0Po5y02msLADs=" alt="#">
+                            </span>
+                            <span class="explore-slide__title">ROUND CUT</span>
+                            <span class="explore-slide__text">
+                                Round cut diamonds maximize light return and sparkle, and are the most brilliant of the diamond cuts.
+                            </span>
+                        </a>
+                        <a href="#" class="explore__slider-item explore-slide swiper-slide">
+                            <span class="explore-slide__image">
+                                <img class="load-image" data-src="img/explore/2.png" src="data:image/gif;base64,R0lGODlhAQDQAIAAAP///wAAACH5BAEAAAEALAAAAAABANAAAAIMjI+py+0Po5y02msLADs=" alt="#">
+                            </span>
+                            <span class="explore-slide__title">PRINCESS CUT</span>
+                            <span class="explore-slide__text">
+                                The second most popular of the diamond shapes, the princess cut is designed for maximum brilliance.
+                            </span>
+                        </a>
+                        <a href="#" class="explore__slider-item explore-slide swiper-slide">
+                            <span class="explore-slide__image">
+                                <img class="load-image" data-src="img/explore/3.png" src="data:image/gif;base64,R0lGODlhAQDQAIAAAP///wAAACH5BAEAAAEALAAAAAABANAAAAIMjI+py+0Po5y02msLADs=" alt="#">
+                            </span>
+                            <span class="explore-slide__title">CUSHION CUT</span>
+                            <span class="explore-slide__text">
+                                The cushion cut resembles a pillow and has an antique feel and a distinctive, romantic appearance
+                            </span>
+                        </a>
+                        <a href="#" class="explore__slider-item explore-slide swiper-slide">
+                            <span class="explore-slide__image">
+                                <img class="load-image" data-src="img/explore/4.png" src="data:image/gif;base64,R0lGODlhAQDQAIAAAP///wAAACH5BAEAAAEALAAAAAABANAAAAIMjI+py+0Po5y02msLADs=" alt="#">
+                            </span>
+                            <span class="explore-slide__title">EMERALD CUT</span>
+                            <span class="explore-slide__text">
+                                A stunningly beautiful diamond cut with long lines that give the stone an elegant and sophisticated look.
+                            </span>
+                        </a>
+                        <a href="#" class="explore__slider-item explore-slide swiper-slide">
+                            <span class="explore-slide__image">
+                                <img class="load-image" data-src="img/explore/5.png" src="data:image/gif;base64,R0lGODlhAQDQAIAAAP///wAAACH5BAEAAAEALAAAAAABANAAAAIMjI+py+0Po5y02msLADs=" alt="#">
+                            </span>
+                            <span class="explore-slide__title">OVAL</span>
+                            <span class="explore-slide__text">
+                                Oval cut diamonds serve to elegantly elongate fingers, creating the optical illusion of length.
+                            </span>
+                        </a>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DESIGN YOUR OWN -->
+        <section class="section dyo">
+            <div class="container dyo__container">
+                <div class="dyo__content">
+                    <div class="dyo__column dyo__column_img">
+                        <img class="load-image" data-src="img/dyo/1.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" alt="">
+                    </div>
+                    <div class="dyo__column dyo__column_text">
+                        <div class="title title_sm">DESIGN YOUR OWN</div>
+                        <div class="title ">DIAMOND ENGAGEMENT RING</div>
+                        <div class="dyo__text">
+                            Select from hundreds of stunning engagement ring styles and add a
+                            brilliant loose diamond of your choice. Or begin by selecting one of
+                            200,000+ loose diamonds and match it with a beautiful ring setting in the
+                            precious metal of your choice.
+                        </div>
+                        <img class="dyo__img-eq" src="img/dyo/Icons.svg" alt="">
+                        <div class="welcome__buttons welcome__buttons_dyo">
+                            <a href="#" class="welcome__button welcome__button_dyo">Loose Diamonds</a>
+                            <a href="#" class="welcome__button welcome__button_dyo">Engagement rings</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LEARNING CENTER AND LAB CREATED -->
+        <section class="section infoshop">
+            <div class="container infoshop__container">
+                <div class="lc">
+                    <div class="lc__title title ">Learning Center</div>
+                    <ul class="lc__list">
+                        <li>
+                            <a class="lc__link" href="#"><img src="img/icons/diamond.svg" alt="">Learning Center</a>
+                        </li>
+                        <li>
+                            <a class="lc__link" href="#"><img src="img/icons/diamond.svg" alt="">Learn About Diamonds</a>
+                        </li>
+                        <li>
+                            <a class="lc__link" href="#"><img src="img/icons/diamond.svg" alt="">Learn About Lab Diamonds</a>
+                        </li>
+                        <li>
+                            <a class="lc__link" href="#"><img src="img/icons/diamond.svg" alt="">Lifetime Diamond Upgrade</a>
+                        </li>
+                        <li>
+                            <a class="lc__link" href="#"><img src="img/icons/ring.svg" alt="">Engagement Ring Guide</a>
+                        </li>
+                    </ul>
+                    <img class="lc__image load-image" data-src="img/learn_center/1.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" alt="">
+                </div>
+                <div class="lab-created">
+                    <div class="lab-created__title title ">Lab Created Diamonds</div>
+                    <div class="lab-created__text">
+                        Lab created diamonds are a responsible choice that require no new mining and offer excellent value. They exhibit the same fire, scintillation, and sparkle as natural diamonds.
+                    </div>
+                    <a class="lab-created__link" href="#">Shop Lab Diamonds</a>
+                    <img class="lab-created__image load-image" data-src="img/lab_created/1.png" src="data:image/gif;base64,R0lGODlhPALzAIAAAP///wAAACH5BAEAAAEALAAAAAA8AvMAAAL+jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1tre4ubq7vL2+v7CxwsPExcbHyMnKy8zNzs/AwdLT1NXW19jZ2tvc3d7f0NHi4+Tl5ufo6err7O3u7+Dh8vP09fb3+Pn6+/z9/v/w8woMCBBAsaPIgwocKFDBs6fAgxosSJFCtavIgxo8b+jRw7evwIMqTIkSRLmjyJMqXKlSxbunwJM6bMmTRr2ryJM6fOnTx7+vwJNKjQoUSLGj2KNKnSpUybOn0KNarUqVSrWr2KNavWrVy7ev0KNqzYsWTLmj2LNq3atWzbun0LN67cuXTr2r2LN6/evXz7+v0LOLDgwYQLGz6MOLHixYwbO34MObLkyZQrW76MObPmzZw7e/4MOrTo0aRLmz6NOrXq1axbu34NO7bs2bRr276NO7fu3bx7+/4NPLjw4cSLGz+OPLny5cybO38OPbr06dSrW7+OPbv27dy7e/8OPrz48eTLmz+PPr369ezbu38PP778+fTr27+PP7/+/fwe+/v/D2CAAg5IYIEGHohgggouyGCDDj4IYYQSPlYAADs=" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- CONFLICT -->
+        <section class="section conflict">
+            <div class="container conflict__container">
+                <div class="conflict__content">
+                    <div class="conflict__title title ">CONFLICT-FREE DIAMONDS</div>
+                    <div class="conflict__text">
+                        Every loose diamond on JamesAllen.com is conflict-free and certified by one of the top 3 grading laboratories: GIA, AGS or IGI. The diamond certificates are displayed along with the loose diamond on our site.
+                    </div>
+                    <a class="conflict__link" href="#">Learn more</a>
+                </div>
+                <div class="guarantee">
+                    <div class="guarantee__title title ">GUARANTEE</div>
+                    <ul class="guarantee__list">
+                        <li>
+                            <span>200,000+ CERTIFIED CONFLICT-FREE DIAMONDS, ALL PHOTOGRAPHED IN 360° HD</span>
+                        </li>
+                        <li>
+                            <span>24/7 DIAMOND EXPERTS, WITH OPTION FOR REAL-TIME DIAMOND INSPECTIONS</span>
+                        </li>
+                        <li>
+                            <span>LIFETIME WARRANTY</span>
+                        </li>
+                        <li>
+                            <span>FREE SHIPPING WORLDWIDE</span>
+                        </li>
+                        <li>
+                            <span>HASSLE-FREE RETURNS WITH 100% MONEY BACK</span>
+                        </li>
+                    </ul>
+                    <a class="guarantee__link" href="#">LEARN MORE</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENGAGEMENT RINGS -->
+        <section class="section dyo dyo_b">
+            <div class="container dyo__container">
+                <div class="dyo__content dyo__content_b">
+                    <div class="dyo__column dyo__column_eng">
+                        <img class="load-image" data-src="img/welcome/4.png" src="data:image/gif;base64,R0lGODlhAQCSAYAAAP///wAAACH5BAEAAAEALAAAAAABAJIBAAIRjI+py+0Po5y02ouz3rz7zxUAOw==" alt="">
+                    </div>
+                    <div class="dyo__column dyo__column_text dyo__column_text-b">
+                        <div class="title title_lg title_bold">ENGAGEMENT RINGS</div>
+                        <div class="dyo__text dyo__text_b">  
+                            Start designing the perfect engagement ring with either the setting or a diamond. Select from hundreds of stunning ring styles and then add a brilliant colorless or fancy color diamond. Or select from 200,000+ loose diamonds and match your stone with a beautiful ring setting in the precious metal of your choice.
+                        </div>
+                        <img class="dyo__img-eq" src="img/dyo/Icons.svg" alt="">
+                        <div class="welcome__buttons welcome__buttons_dyo">
+                            <a href="#" class="welcome__button welcome__button_dyo">Engagemebt rings</a>
+                            <a href="#" class="welcome__button welcome__button_dyo">Loose Diamonds</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BEST SELLERS -->
+        <section class="section bestsellers">
+            <div class="bestsellers__title title title_up">
+                <span class="">Popular Engagement Rings</span>
+            </div>
+            <div class="container bestsellers__container">
+                <div class="swiper-container bestsellers__slider">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-wrapper bestsellers__slider-wrapper">
+                        <a class="swiper-slide bestsellers__slide" href="#">
+                            <span class="bestsellers__img">
+                                <img class="load-image" data-src="img/best-sellers/1.png" src="data:image/gif;base64,R0lGODlh+wCWAIAAAP///wAAACH5BAEAAAEALAAAAAD7AJYAAAL7jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1tre4ubq7vL2+v7CxwsPExcbHyMnKy8zNzs/AwdLT1NXW19jZ2tvc3d7f0NHi4+Tl5ufo6err7O3u7+Dh8vP09fb3+Pn6+/z9/v/w8woMCBBAsaPIgwocKFDBs6fAgxosSJFCv2KwAAOw==" alt="1">
+                            </span>
+                            <span class="bestsellers__text">THREE-STONE</span>
+                        </a>
+                        <a class="swiper-slide bestsellers__slide" href="#">
+                            <span class="bestsellers__img">
+                                <img class="load-image" data-src="img/best-sellers/2.png" src="data:image/gif;base64,R0lGODlh+wCWAIAAAP///wAAACH5BAEAAAEALAAAAAD7AJYAAAL7jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1tre4ubq7vL2+v7CxwsPExcbHyMnKy8zNzs/AwdLT1NXW19jZ2tvc3d7f0NHi4+Tl5ufo6err7O3u7+Dh8vP09fb3+Pn6+/z9/v/w8woMCBBAsaPIgwocKFDBs6fAgxosSJFCv2KwAAOw==" alt="2">
+                            </span>
+                            <span class="bestsellers__text">PAVÉ</span>
+                        </a>
+                        <a class="swiper-slide bestsellers__slide" href="#">
+                            <span class="bestsellers__img">
+                                <img class="load-image" data-src="img/best-sellers/3.png" src="data:image/gif;base64,R0lGODlh+wCWAIAAAP///wAAACH5BAEAAAEALAAAAAD7AJYAAAL7jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1tre4ubq7vL2+v7CxwsPExcbHyMnKy8zNzs/AwdLT1NXW19jZ2tvc3d7f0NHi4+Tl5ufo6err7O3u7+Dh8vP09fb3+Pn6+/z9/v/w8woMCBBAsaPIgwocKFDBs6fAgxosSJFCv2KwAAOw==" alt="3">
+                            </span>
+                            <span class="bestsellers__text">PAVÉ</span>
+                        </a>
+                        <a class="swiper-slide bestsellers__slide" href="#">
+                            <span class="bestsellers__img">
+                                <img class="load-image" data-src="img/best-sellers/4.png" src="data:image/gif;base64,R0lGODlh+wCWAIAAAP///wAAACH5BAEAAAEALAAAAAD7AJYAAAL7jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1tre4ubq7vL2+v7CxwsPExcbHyMnKy8zNzs/AwdLT1NXW19jZ2tvc3d7f0NHi4+Tl5ufo6err7O3u7+Dh8vP09fb3+Pn6+/z9/v/w8woMCBBAsaPIgwocKFDBs6fAgxosSJFCv2KwAAOw==" alt="4">
+                            </span>
+                            <span class="bestsellers__text">HALO</span>
+                        </a>
+                        <a class="swiper-slide bestsellers__slide" href="#">
+                            <span class="bestsellers__img">
+                                <img class="load-image" data-src="img/best-sellers/2.png" src="data:image/gif;base64,R0lGODlh+wCWAIAAAP///wAAACH5BAEAAAEALAAAAAD7AJYAAAL7jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1tre4ubq7vL2+v7CxwsPExcbHyMnKy8zNzs/AwdLT1NXW19jZ2tvc3d7f0NHi4+Tl5ufo6err7O3u7+Dh8vP09fb3+Pn6+/z9/v/w8woMCBBAsaPIgwocKFDBs6fAgxosSJFCv2KwAAOw==" alt="5">
+                            </span>
+                            <span class="bestsellers__text">CHANNEL SET</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SUPERZOOM -->
+        <section class="section superzoom">
+            <div class="container superzoom__container">
+                <div class="guarantee">
+                    <div class="guarantee__title title ">GUARANTEE</div>
+                    <ul class="guarantee__list">
+                        <li>
+                            <span>200,000+ CERTIFIED CONFLICT-FREE DIAMONDS, ALL PHOTOGRAPHED IN 360° HD</span>
+                        </li>
+                        <li>
+                            <span>24/7 DIAMOND EXPERTS, WITH OPTION FOR REAL-TIME DIAMOND INSPECTIONS</span>
+                        </li>
+                        <li>
+                            <span>LIFETIME WARRANTY</span>
+                        </li>
+                        <li>
+                            <span>FREE SHIPPING WORLDWIDE</span>
+                        </li>
+                        <li>
+                            <span>HASSLE-FREE RETURNS WITH 100% MONEY BACK</span>
+                        </li>
+                    </ul>
+                    <a class="guarantee__link" href="#">LEARN MORE</a>
+                </div>
+                <div class="superzoom__content">
+                    <div class="superzoom__image">
+                        <img class="load-image" data-src="img/superzoom/1.png" src="data:image/gif;base64,R0lGODlhAQDtAIAAAP///wAAACH5BAEAAAEALAAAAAABAO0AAAINjI+py+0Po5y02ouzKgA7" alt="">
+                    </div>
+                    <div class="superzoom__title title ">SEE LOOSE DIAMONDS IN 360° HD SUPERZOOM</div>
+                    <div class="superzoom__text">
+                        All of our 200,000+ diamonds are certified by one of the top 3 grading laboratories: GIA, AGS and IGI. But don't rely on the certificate alone; seeing a loose diamond in 40x superzoom lets you really get to know your diamond with your own eyes.
+                    </div>
+                    <div class="superzoom__links">
+                        <a class="superzoom__link" href="#">LOOSE DIAMONDS</a>
+                        <a class="superzoom__link" href="#">FANCY COLOR DIAMONDS</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INSPIRATION GALLERY -->
+        <section class="section inspgallery">
+            <div class="container inspgallery__container">
+                <img class="inspgallery__image inspgallery__image_left load-image" data-src="img/inspiration/left.png" src="data:image/gif;base64,R0lGODlh7QCnAIAAAP///wAAACH5BAEAAAEALAAAAADtAKcAAAL+jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1tre4ubq7vL2+v7CxwsPExcbHyMnKy8zNzs/AwdLT1NXW19jZ2tvc3d7f0NHi4+Tl5ufo6err7O3u7+Dh8vP09fb3+Pn6+/z9/v/w8woMCBBAsaPIgwocKFDBs6fAgxosSJFCtavIgxo8YFjRznFQAAOw==" alt="">
+                <div class="inspgallery__content">
+                    <div class="inspgallery__title title ">INSPIRATION GALLERY</div>
+                    <div class="inspgallery__text">
+                        Need help getting started? Get inspired by customers' recently purchased engagement rings.
+                    </div>
+                    <div class="inspgallery__links">
+                        <a class="inspgallery__link" href="#">EXPLORE CUSTOMERS' DIAMOND ENGAGEMENT RINGS</a>
+                        <a class="inspgallery__link" href="#">EXPLORE PRINCESS CUT RINGS</a>
+                        <a class="inspgallery__link" href="#">EXPLORE CUSHION CUT RINGS</a>
+                    </div>
+                </div>
+                <img class="inspgallery__image inspgallery__image_right load-image" data-src="img/inspiration/right.png" src="data:image/gif;base64,R0lGODlhvACnAIAAAP///wAAACH5BAEAAAEALAAAAAC8AKcAAALhjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1tre4ubq7vL2+v7CxwsPExcbHyMnKy8zNzs/AwdLT1NXW19jZ2tvc3d7f0NHi4+Tl5ufo6err7O3u7+Dh8vP09fb3+Pn6+/z9/vn1EAADs=" alt="">
+            </div>
+        </section>
+
+        <!-- SHOP BY STYLE -->
+        <section class="section shop">
+            <div class="container shop__container">
+                <div class="shop__title title ">Shop by style</div>
+                <div class="shop__slider-box">
+                    <div class="shop__slider">
+                        <div class="shop__slider-navigation">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                        <div class="swiper-container shop__slider-container">
+                            <div class="swiper-wrapper shop__slider-wrapper">
+                                <a class="swiper-slide shop__slider-slide" href="#">
+                                    <span class="shop__slider-slide-img">
+                                        <img class="load-image" data-src="img/shop/sl1.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" alt="sl1">
+                                        <span class="shop__slider-slide-img-overlay overlay-shop">
+                                            <span class="overlay-shop__text">Shop now</span>
+                                            <span class="overlay-shop__icon">
+                                                <img class="load-image" data-src="img/shop/overlay-img.svg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" alt="Shop">
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <span class="shop__slider-slide-name">
+                                        Classic Rings
+                                    </span>
+                                    <span class="shop__slider-slide-text">
+                                        Our collection of classic designs features rings you can love for a lifetime.
+                                    </span>
+                                </a>
+                                <a class="swiper-slide shop__slider-slide" href="#">
+                                    <span class="shop__slider-slide-img">
+                                        <img class="load-image" data-src="img/shop/sl2.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" alt="sl2">
+                                        <span class="shop__slider-slide-img-overlay overlay-shop">
+                                            <span class="overlay-shop__text">Shop now</span>
+                                            <span class="overlay-shop__icon">
+                                                <img class="load-image" data-src="img/shop/overlay-img.svg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" alt="Shop">
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <span class="shop__slider-slide-name">
+                                        Three Stone Rings
+                                    </span>
+                                    <span class="shop__slider-slide-text">
+                                        Browse our collection of three stone engagement rings, from modern to antique-inspired.
+                                    </span>
+                                </a>
+                                <a class="swiper-slide shop__slider-slide" href="#">
+                                    <span class="shop__slider-slide-img">
+                                        <img class="load-image" data-src="img/shop/sl3.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" alt="sl3">
+                                        <span class="shop__slider-slide-img-overlay overlay-shop">
+                                            <span class="overlay-shop__text">Shop now</span>
+                                            <span class="overlay-shop__icon">
+                                                <img class="load-image" data-src="img/shop/overlay-img.svg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" alt="Shop">
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <span class="shop__slider-slide-name">
+                                        Oval Rings
+                                    </span>
+                                    <span class="shop__slider-slide-text">
+                                        Romantic and distinctive, the feminine curves of oval cut gemstones are beautifully complemented
+                                    </span>
+                                </a>
+                                <a class="swiper-slide shop__slider-slide" href="#">
+                                    <span class="shop__slider-slide-img">
+                                        <img class="load-image" data-src="img/shop/sl4.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" alt="sl4">
+                                        <span class="shop__slider-slide-img-overlay overlay-shop">
+                                            <span class="overlay-shop__text">Shop now</span>
+                                            <span class="overlay-shop__icon">
+                                                <img class="load-image" data-src="img/shop/overlay-img.svg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" alt="Shop">
+                                            </span>
+                                        </span>
+                                    </span>
+                                    <span class="shop__slider-slide-name">
+                                        Halo Rings
+                                    </span>
+                                    <span class="shop__slider-slide-text">
+                                        Halo settings feature a center gemstone completely encircled by smaller accent 
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SHOP DIAMONDS BY SHAPES -->
+        <section class="section diamond-shapes diamond-shapes_land">
+            <div class="container diamond-shapes__container">
+                <div class="diamond-shapes__title title ">Shop diamond by shapes</div>
+                <div class="diamond-shapes__subtitle">Spin actual diamonds in 360° HD and zoom in up to 40x. </div>
+                <div class="diamond-shapes__content">
+                    <a class="diamond-shapes__item" href="#">
+                        <span class="diamond-shapes__item-img">
+                            <img class="load-image" data-src="img/diamond-shapes/1.png" src="data:image/gif;base64,R0lGODlhAQAwAIAAAP///wAAACH5BAEAAAEALAAAAAABADAAAAIGjI+py30FADs=" alt="1">
+                        </span>
+                        <p class="diamond-shapes__item-name">ROUND</p>
+                    </a>
+                    <a class="diamond-shapes__item" href="#">
+                        <span class="diamond-shapes__item-img">
+                            <img class="load-image" data-src="img/diamond-shapes/2.png" src="data:image/gif;base64,R0lGODlhAQAwAIAAAP///wAAACH5BAEAAAEALAAAAAABADAAAAIGjI+py30FADs=" alt="2">
+                        </span>
+                        <p class="diamond-shapes__item-name">PRINCESS</p>
+                    </a>
+                    <a class="diamond-shapes__item" href="#">
+                        <span class="diamond-shapes__item-img">
+                            <img class="load-image" data-src="img/diamond-shapes/3.png" src="data:image/gif;base64,R0lGODlhAQAwAIAAAP///wAAACH5BAEAAAEALAAAAAABADAAAAIGjI+py30FADs=" alt="3">
+                        </span>
+                        <p class="diamond-shapes__item-name">EMERALD</p>
+                    </a>
+                    <a class="diamond-shapes__item" href="#">
+                        <span class="diamond-shapes__item-img">
+                            <img class="load-image" data-src="img/diamond-shapes/4.png" src="data:image/gif;base64,R0lGODlhAQAwAIAAAP///wAAACH5BAEAAAEALAAAAAABADAAAAIGjI+py30FADs=" alt="4">
+                        </span>
+                        <p class="diamond-shapes__item-name">ASSCHER</p>
+                    </a>
+                    <a class="diamond-shapes__item" href="#">
+                        <span class="diamond-shapes__item-img">
+                            <img class="load-image" data-src="img/diamond-shapes/5.png" src="data:image/gif;base64,R0lGODlhAQAwAIAAAP///wAAACH5BAEAAAEALAAAAAABADAAAAIGjI+py30FADs=" alt="5">
+                        </span>
+                        <p class="diamond-shapes__item-name">OVAL</p>
+                    </a>
+                    <a class="diamond-shapes__item" href="#">
+                        <span class="diamond-shapes__item-img">
+                            <img class="load-image" data-src="img/diamond-shapes/6.png" src="data:image/gif;base64,R0lGODlhAQAwAIAAAP///wAAACH5BAEAAAEALAAAAAABADAAAAIGjI+py30FADs=" alt="6">
+                        </span>
+                        <p class="diamond-shapes__item-name">RADIANT</p>
+                    </a>
+                    <a class="diamond-shapes__item" href="#">
+                        <span class="diamond-shapes__item-img">
+                            <img class="load-image" data-src="img/diamond-shapes/7.png" src="data:image/gif;base64,R0lGODlhAQAwAIAAAP///wAAACH5BAEAAAEALAAAAAABADAAAAIGjI+py30FADs=" alt="7">
+                        </span>
+                        <p class="diamond-shapes__item-name">PEAR</p>
+                    </a>
+                    <a class="diamond-shapes__item" href="#">
+                        <span class="diamond-shapes__item-img">
+                            <img class="load-image" data-src="img/diamond-shapes/8.png" src="data:image/gif;base64,R0lGODlhAQAwAIAAAP///wAAACH5BAEAAAEALAAAAAABADAAAAIGjI+py30FADs=" alt="8">
+                        </span>
+                        <p class="diamond-shapes__item-name">HEART</p>
+                    </a>
+                    <a class="diamond-shapes__item" href="#">
+                        <span class="diamond-shapes__item-img">
+                            <img class="load-image" data-src="img/diamond-shapes/9.png" src="data:image/gif;base64,R0lGODlhAQAwAIAAAP///wAAACH5BAEAAAEALAAAAAABADAAAAIGjI+py30FADs=" alt="9">
+                        </span>
+                        <p class="diamond-shapes__item-name">MARQUISE</p>
+                    </a>
+                    <a class="diamond-shapes__item" href="#">
+                        <span class="diamond-shapes__item-img">
+                            <img class="load-image" data-src="img/diamond-shapes/10.png" src="data:image/gif;base64,R0lGODlhAQAwAIAAAP///wAAACH5BAEAAAEALAAAAAABADAAAAIGjI+py30FADs=" alt="10">
+                        </span>
+                        <p class="diamond-shapes__item-name">CUSHION</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- MORE PERSONAL -->
+        <section class="section personal">
+            <div class="container personal__container">
+                <div class="personal__content">
+                    <div class="personal__column personal__column_text">
+                        <div class="personal__title title ">THERE'S NOTHING MORE PERSONAL THAN AN ENGAGEMENT RING</div>
+                        <div class="personal__text">
+                            View our genuine customer engagement moments from around the world. Get inspired by our collection of proposal stories from James Allen customers, and view the diamond rings behind the moments. Read the stories for proposal inspiration or share your own James Allen engagement moment!
+                        </div>
+                        <a class="personal__link" href="#">LOOSE DIAMONDS</a>
+                    </div>
+                    <div class="personal__column">
+                        <img class="personal__image" src="img/personal/1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ANNIVERSARY -->
+        <section class="section anniversary">
+            <div class="anniversary__container container">
+                <div class="anniversary__image">
+                    <img class="load-image" data-src="img/anniversry/1.png" src="data:image/gif;base64,R0lGODlhNgMjAoAAAP///wAAACH5BAEAAAEALAAAAAA2AyMCAAL+jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1tre4ubq7vL2+v7CxwsPExcbHyMnKy8zNzs/AwdLT1NXW19jZ2tvc3d7f0NHi4+Tl5ufo6err7O3u7+Dh8vP09fb3+Pn6+/z9/v/w8woMCBBAsaPIgwocKFDBs6fAgxosSJFCtavIgxo8b+jRw7evwIMqTIkSRLmjyJMqXKlSxbunwJM6bMmTRr2ryJM6fOnTx7+vwJNKjQoUSLGj2KNKnSpUybOn0KNarUqVSrWr2KNavWrVy7ev0KNqzYsWTLmj2LNq3atWzbun0LN67cuXTr2r2LN6/evXz7+v0LOLDgwYQLGz6MOLHixYwbO34MObLkyZQrW76MObPmzZw7e/4MOrTo0aRLmz6NOrXq1axbu34NO7bs2bRr276NO7fu3bx7+/4NPLjw4cSLGz+OPLny5cybO38OPbr06dSrW7+OPbv27dy7e/8OPrz48eTLmz+PPr369ezbu38PP778+fTr27+PP7/+/fz++/v/D2CAAg5IYIEGHohgggouyGCDDj4IYYQSTkhhhRZeiGGGGm7IYYcefghiiCKOSGKJJp6IYooqrshiiy6+CGOMMs5IY4023ohjjjruyGOPPv4IZJBCDklkkUYeiWSSSi7JZJNOPglllFJOSWWVVl6JZZZabslll15+CWaYYo5JZplmnolmmmquyWabbr4JZ5xyzklnnXbeiWeeeu7JZ59+/glooIIOSmihhh6KaKKKLspoo44+Cmmkkk5KaaWWXopppppuymmnnn4Kaqiijkpqqaaeimqqqq7KaquuvgprrLLOSmuttt6Ka6667sprr77+Cmywwg5LbLHGHov+bLLKLstss84+C2200k5LbbXWXottttpuy2233n4Lbrjijktuueaei2666q7LbrvuvgtvvPLOS2+99t6Lb7767stvv/7+C3DAAg9McMEGH4xwwgovzHDDDj8MccQST0xxxRZfjHHGGm/McccefwxyyCKPTHLJJp+Mcsoqr8xyyy6/DHPMMs9Mc80234xzzjrvzHPPPv8MdNBCD0100UYfjXTSSi/NdNNOPw111FJPTXXVVl+NddZab811115/DXbYYo9Ndtlmn4122mqvzXbbbr8Nd9xyz0133XbfjXfeeu/Nd99+/w144IIPTnjhhh+OeOKKL854444/Dnnkkk8wTnnlll+Oeeaab855555/Dnrooo9Oeummn4566qqvznrrrr8Oe+yyz0577bbfjm8BADs=" alt="">
+                </div>
+                <div class="anniversary__content">
+                    <div class="anniversary__title title title_lg">WEDDING RINGS &
+                        ANNIVERSARY RINGS</div>
+                    <div class="anniversary__text">
+                        Begin forever with a distinctively beautiful wedding ring.
+                        Choose from a myriad of gorgeous styles - including
+                        diamond-laced, classic, eternity, gemstone or vintage
+                        wedding bands - to mark your everlasting love. Match
+                        your engagement band to the perfect wedding ring or
+                        make your promise with matching wedding bands.
+                    </div>
+                    <div class="welcome__buttons">
+                        <a href="#" class="welcome__button">Shop wedding rings</a>
+                        <a href="#" class="welcome__button">Shop anniversary rings</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOR WOMEN -->
+        <section class="section gender gender_w">
+            <div class="container gender__container">
+                <div class="gender__box">
+                    <div class="gender__content">
+                        <div class="gender__title title ">For Women</div>
+                        <div class="gender__text">
+                            Find your dream wedding ring in 14k and 18k white gold and yellow gold, platinum or rose gold. Celebrate your commitment with a wedding ring embedded with diamonds or a simpler, classic wedding band. Renew your vows on your anniversary with several colorful gemstone stackable rings or a luminous eternity ring.
+                        </div>
+                        <div class="gender-slider">
+                            <div class="gender-slider__box swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="gender-slider__item swiper-slide">
+                                        <div class="gender-slider__item-image">
+                                            <img class="load-image" src="data:image/gif;base64,R0lGODlhAQC3AIAAAP///wAAACH5BAEAAAEALAAAAAABALcAAAIMjI+py+0Po5y0WlgAADs=" data-src="img/for/sl1.png" alt="">
+                                        </div>
+                                        <div class="gender-slider__item-title">CLASSIC</div>
+                                        <div class="gender-slider__item-text">
+                                            Classic wedding rings are the perfect choice for newly engaged couples in the market for traditional.
+                                        </div>
+                                    </div>
+                                    <div class="gender-slider__item swiper-slide">
+                                        <div class="gender-slider__item-image">
+                                            <img class="load-image" src="data:image/gif;base64,R0lGODlhAQC3AIAAAP///wAAACH5BAEAAAEALAAAAAABALcAAAIMjI+py+0Po5y0WlgAADs=" data-src="img/for/sl2.png" alt="">
+                                        </div>
+                                        <div class="gender-slider__item-title">ETERNITY</div>
+                                        <div class="gender-slider__item-text">
+                                            Women's eternity rings are the perfect gift for anniversaries and special occasions. 
+                                        </div>
+                                    </div>
+                                    <div class="gender-slider__item swiper-slide">
+                                        <div class="gender-slider__item-image">
+                                            <img class="load-image" src="data:image/gif;base64,R0lGODlhAQC3AIAAAP///wAAACH5BAEAAAEALAAAAAABALcAAAIMjI+py+0Po5y0WlgAADs=" data-src="img/for/sl3.png" alt="">
+                                        </div>
+                                        <div class="gender-slider__item-title">ANNIVERSARY</div>
+                                        <div class="gender-slider__item-text">
+                                            Women's anniversary rings come in a range of styles, widths and metal types. 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gender__image">
+                        <img class="load-image" data-src="img/for/1.jpg" src="data:image/gif;base64,R0lGODlhGAAjAIAAAP///wAAACH5BAEAAAEALAAAAAAYACMAAAIbjI+py+0Po5y02ouz3rz7D4biSJbmiabqymIFADs=" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOR MEN -->
+        <section class="section gender gender_m">
+            <div class="container gender__container">
+                <div class="gender__box gender__box_m">
+                    <div class="gender__image">
+                        <img class="load-image" data-src="img/for/2.jpg" src="data:image/gif;base64,R0lGODlhGAAjAIAAAP///wAAACH5BAEAAAEALAAAAAAYACMAAAIbjI+py+0Po5y02ouz3rz7D4biSJbmiabqymIFADs=" alt="">
+                    </div>
+                    <div class="gender__content gender__content_m">
+                        <div class="gender__title title ">For men</div>
+                        <div class="gender__text">
+                            Go for the traditional, classic wedding band, or dare to be different with a unique alternative metal wedding ring made from cobalt, tantalum or titanium. Add some diamonds to match the sparkle in your beloved’s eyes or say forever with a carved band, a twist on the classic wedding ring.
+                        </div>
+                        <div class="gender-slider">
+                            <div class="gender-slider__box swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="gender-slider__item swiper-slide">
+                                        <div class="gender-slider__item-image">
+                                            <img class="load-image" src="data:image/gif;base64,R0lGODlhAQC3AIAAAP///wAAACH5BAEAAAEALAAAAAABALcAAAIMjI+py+0Po5y0WlgAADs=" data-src="img/for/sl4.png" alt="">
+                                        </div>
+                                        <div class="gender-slider__item-title">CLASSIC</div>
+                                        <div class="gender-slider__item-text">
+                                            Classic wedding rings are the perfect choice for newly engaged couples in the market for traditional.
+                                        </div>
+                                    </div>
+                                    <div class="gender-slider__item swiper-slide">
+                                        <div class="gender-slider__item-image">
+                                            <img class="load-image" src="data:image/gif;base64,R0lGODlhAQC3AIAAAP///wAAACH5BAEAAAEALAAAAAABALcAAAIMjI+py+0Po5y0WlgAADs=" data-src="img/for/sl5.png" alt="">
+                                        </div>
+                                        <div class="gender-slider__item-title">CARVED</div>
+                                        <div class="gender-slider__item-text">
+                                            Women's eternity rings are the perfect gift for anniversaries and special occasions. 
+                                        </div>
+                                    </div>
+                                    <div class="gender-slider__item swiper-slide">
+                                        <div class="gender-slider__item-image">
+                                            <img class="load-image" src="data:image/gif;base64,R0lGODlhAQC3AIAAAP///wAAACH5BAEAAAEALAAAAAABALcAAAIMjI+py+0Po5y0WlgAADs=" data-src="img/for/sl6.png" alt="">
+                                        </div>
+                                        <div class="gender-slider__item-title">Diamond</div>
+                                        <div class="gender-slider__item-text">
+                                            Women's anniversary rings come in a range of styles, widths and metal types.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BEST SELLERS -->
+        <section class="section bestsellers">
+            <div class="bestsellers__title title title_up">
+                <span class="">Popular Wedding Rings</span>
+            </div>
+            <div class="container bestsellers__container">
+                <div class="swiper-container bestsellers__slider">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-wrapper bestsellers__slider-wrapper">
+                        <a class="swiper-slide bestsellers__slide" href="#">
+                            <span class="bestsellers__img">
+                                <img class="load-image" data-src="img/best-sellers/1.png" src="data:image/gif;base64,R0lGODlh+wCWAIAAAP///wAAACH5BAEAAAEALAAAAAD7AJYAAAL7jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1tre4ubq7vL2+v7CxwsPExcbHyMnKy8zNzs/AwdLT1NXW19jZ2tvc3d7f0NHi4+Tl5ufo6err7O3u7+Dh8vP09fb3+Pn6+/z9/v/w8woMCBBAsaPIgwocKFDBs6fAgxosSJFCv2KwAAOw==" alt="1">
+                            </span>
+                            <span class="bestsellers__text">THREE-STONE</span>
+                        </a>
+                        <a class="swiper-slide bestsellers__slide" href="#">
+                            <span class="bestsellers__img">
+                                <img class="load-image" data-src="img/best-sellers/2.png" src="data:image/gif;base64,R0lGODlh+wCWAIAAAP///wAAACH5BAEAAAEALAAAAAD7AJYAAAL7jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1tre4ubq7vL2+v7CxwsPExcbHyMnKy8zNzs/AwdLT1NXW19jZ2tvc3d7f0NHi4+Tl5ufo6err7O3u7+Dh8vP09fb3+Pn6+/z9/v/w8woMCBBAsaPIgwocKFDBs6fAgxosSJFCv2KwAAOw==" alt="2">
+                            </span>
+                            <span class="bestsellers__text">PAVÉ</span>
+                        </a>
+                        <a class="swiper-slide bestsellers__slide" href="#">
+                            <span class="bestsellers__img">
+                                <img class="load-image" data-src="img/best-sellers/3.png" src="data:image/gif;base64,R0lGODlh+wCWAIAAAP///wAAACH5BAEAAAEALAAAAAD7AJYAAAL7jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1tre4ubq7vL2+v7CxwsPExcbHyMnKy8zNzs/AwdLT1NXW19jZ2tvc3d7f0NHi4+Tl5ufo6err7O3u7+Dh8vP09fb3+Pn6+/z9/v/w8woMCBBAsaPIgwocKFDBs6fAgxosSJFCv2KwAAOw==" alt="3">
+                            </span>
+                            <span class="bestsellers__text">PAVÉ</span>
+                        </a>
+                        <a class="swiper-slide bestsellers__slide" href="#">
+                            <span class="bestsellers__img">
+                                <img class="load-image" data-src="img/best-sellers/4.png" src="data:image/gif;base64,R0lGODlh+wCWAIAAAP///wAAACH5BAEAAAEALAAAAAD7AJYAAAL7jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1tre4ubq7vL2+v7CxwsPExcbHyMnKy8zNzs/AwdLT1NXW19jZ2tvc3d7f0NHi4+Tl5ufo6err7O3u7+Dh8vP09fb3+Pn6+/z9/v/w8woMCBBAsaPIgwocKFDBs6fAgxosSJFCv2KwAAOw==" alt="4">
+                            </span>
+                            <span class="bestsellers__text">HALO</span>
+                        </a>
+                        <a class="swiper-slide bestsellers__slide" href="#">
+                            <span class="bestsellers__img">
+                                <img class="load-image" data-src="img/best-sellers/2.png" src="data:image/gif;base64,R0lGODlh+wCWAIAAAP///wAAACH5BAEAAAEALAAAAAD7AJYAAAL7jI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8fksvmMTqvX7Lb7DY/L5/S6/Y7P6/f8vv8PGCg4SFhoeIiYqLjI2Oj4CBkpOUlZaXmJmam5ydnp+QkaKjpKWmp6ipqqusra6voKGys7S1tre4ubq7vL2+v7CxwsPExcbHyMnKy8zNzs/AwdLT1NXW19jZ2tvc3d7f0NHi4+Tl5ufo6err7O3u7+Dh8vP09fb3+Pn6+/z9/v/w8woMCBBAsaPIgwocKFDBs6fAgxosSJFCv2KwAAOw==" alt="5">
+                            </span>
+                            <span class="bestsellers__text">CHANNEL SET</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- APART -->
+        <section class="apart">
+            <div class="apart__container">
+                <div class="apart__content">
+                    <div class="apart__title title ">What Sets Us Apart</div>
+                    <ul class="apart__list">
+                        <li>
+                            <img src="img/icons/diamond2.svg" alt="">
+                            <span>Responsible Sourcing</span>
+                        </li>
+                        <li>
+                            <img src="img/icons/diamond2.svg" alt="">
+                            <span>Unique & Handcrafted</span>
+                        </li>
+                        <li>
+                            <img src="img/icons/diamond2.svg" alt="">
+                            <span>Personalized Experience</span>
+                        </li>
+                        <li>
+                            <img src="img/icons/diamond2.svg" alt="">
+                            <span>Giving Back</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="apart__image">
+                <img src="img/apart/1.jpg" alt="">
+            </div>
+        </section>
+
+        <!-- SIGN UP -->
+        <div class="sign-up">
+            <div class="container sign-up__container">
+                <div class="sign-up__title title ">Sign up for our email list</div>
+                <div class="sign-up__form-box">
+                    <form class="sign-up__form" action="#">
+                        <input autocomplete="off" type="text" name="form[]" placeholder="Enter Adress" class="sign-up__form-input input req email">
+                        <div class="sign-up__form-buttons">
+                            <button class="sign-up__form-button sign-up__form-button_m" name="Man" type="submit">Man</button>
+                            <button class="sign-up__form-button sign-up__form-button_w" name="Woman" type="submit">Woman</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="sign-up__content">
+                    <p class="sign-up__text">
+                        *By signing up you confirm that you have read the Privacy Policy and agree that your email and gender will be collected and used by James Allen for the purposes of sending news, promotions and updates via email. You can withdraw your consent at any time by unsubscribing or contacting us via service@jamesallen.com.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="container footer-top__container">
+                    <div class="footer-top__column">
+                        <div class="footer-top__column-title title title_sm">Experience</div>
+                        <ul class="footer-top__column-list">
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">360° display technology</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Virtual ring sizer</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Refer a friend</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Become an affiliate</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Custom design rings</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Packaging</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Site map</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-top__column">
+                        <div class="footer-top__column-title title title_sm">Our company</div>
+                        <ul class="footer-top__column-list">
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Customer service</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Lifetime warranty</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Financing options</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Free shipping worldwide</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Jewelry insurance</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">1 year free resizing</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Free engraving</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Tax & duty calculator</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-top__column">
+                        <div class="footer-top__column-title title title_sm">About us</div>
+                        <ul class="footer-top__column-list">
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">About us</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Reviews</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Engagement moments</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">The blog</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Press</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Cities</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Locations</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Contact us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-top__column">
+                        <div class="footer-top__column-title title title_sm">Policies</div>
+                        <ul class="footer-top__column-list">
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Conflict-free diamonds</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Lifetime upgrade</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Payment options</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Terms of use</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Privacy policy</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Cookies policy</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Accessibility</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Privacy shield notice</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container footer-bottom__container">
+                    <div class="footer-bottom__column footer-bottom__column_social">
+                        <ul class="footer-bottom__list">
+                            <li class="footer-bottom__list-item">
+                                <a href="#"><img src="img/footer_icons/social/1.svg" alt="Facebook"></a>
+                            </li>
+                            <li class="footer-bottom__list-item">
+                                <a href="#"><img src="img/footer_icons/social/2.svg" alt="Twitter"></a>
+                            </li>
+                            <li class="footer-bottom__list-item">
+                                <a href="#"><img src="img/footer_icons/social/3.svg" alt="WhatsApp"></a>
+                            </li>
+                            <li class="footer-bottom__list-item">
+                                <a href="#"><img src="img/footer_icons/social/4.svg" alt="Messanger"></a>
+                            </li>
+                            <li class="footer-bottom__list-item">
+                                <a href="#"><img src="img/footer_icons/social/5.svg" alt="You Tube"></a>
+                            </li>
+                            <li class="footer-bottom__list-item">
+                                <a href="#"><img src="img/footer_icons/social/6.svg" alt="Instagram"></a>
+                            </li>
+                            <li class="footer-bottom__list-item">
+                                <a href="#"><img src="img/footer_icons/social/7.svg" alt="Linked In"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-bottom__column  footer-bottom__column_payment">
+                        <ul class="footer-bottom__list">
+                            <li class="footer-bottom__list-item">
+                                <img src="img/footer_icons/payment/1.svg" alt="Visa">
+                            </li>
+                            <li class="footer-bottom__list-item">
+                                <img src="img/footer_icons/payment/2.svg" alt="PayPal">
+                            </li>
+                            <li class="footer-bottom__list-item">
+                                <img src="img/footer_icons/payment/3.svg" alt="Amazon">
+                            </li>
+                            <li class="footer-bottom__list-item">
+                                <img src="img/footer_icons/payment/4.svg" alt="AMEX">
+                            </li>
+                            <li class="footer-bottom__list-item">
+                                <img src="img/footer_icons/payment/5.svg" alt="MasterCard">
+                            </li>
+                            <li class="footer-bottom__list-item">
+                                <img src="img/footer_icons/payment/6.svg" alt="Apple Pay">
+                            </li>
+                            <li class="footer-bottom__list-item">
+                                <img src="img/footer_icons/payment/7.svg" alt="Google Pay">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-bottom__column footer-bottom__column_copyright">
+                        © 2020. All Rights Reserved.
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="libs/jquery-3.4.1.min.js"></script>
+    <!-- SWIPER-SLIDER -->
+    <script src="libs/swiper.min.js"></script>
+    <!-- NICE-SELECT -->
+    <script src="libs/jquery.nice-select.min.js"></script>
+    <!-- SCRIPTS -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
