@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16BIT</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.min.css">
+    <script>
+        function showPrefferedOptions(oSelect) {
+            var aOptionsValues = [];
+            var aOptions = getSelectedIndexes(oSelect);
+            for (var i = 0; i < aOptions.length; i++) {
+                aOptionsValues.push(aOptions[i].substring(3));
+            }
+            document.querySelector('.header__translate-flag').src = 'img/flags/' + aOptionsValues + '.png';
+        }
+        function getSelectedIndexes(oSelect) {
+            var aSelected = [];
+            for (var i = 0; i < oSelect.options.length; i++) {
+                if (oSelect.options[i].selected) {
+                    aSelected.push(oSelect.options[i].getAttribute('value'));
+                }
+            }
+            
+            return aSelected;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <img class="bg-decor-1" src="img/ellipse.png" alt="#">
+        <img class="bg-decor-2" src="img/bg-decor-1.png" alt="#">
+        <img class="bg-decor-3" src="img/bg-decor-2.png" alt="#">
+
+        <!-- COMMUNICATION BUTTON -->
+        <div class="comm-btn">
+            <div class="dws">
+                <div class="pulse">
+                    <div class="bloc"></div>
+                    <div class="phone"><img src="img/chat.svg" alt="Message"></div>
+                    <div class="text notranslate">SUPPORT <br> 24/7</div>
+                </div>
+            </div>
+            <p class="comm-btn__text notranslate">CHAT ME</p>
+        </div>
+
+        <!-- POPUP THANKS -->
+        <div class="popup popup-thanks popup-message ms_1">
+            <div class="popup-table table">
+                <div class="cell">
+                    <div class="popup__content popup-thanks__content">
+                        <div class="popup-close"></div>
+                        <img class="popup-thanks__image" src="img/thanks-check.svg" alt="Thanks">
+                        <div class="popup-thanks__content-text">
+                            Thank you for your interest to the <a href="#">16Bit.game</a> project, we’ll respond to you
+                            shortly
+                        </div>
+                        <a href="#" class="popup-thanks__button">OK</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- POPUP PAYMENT -->
+        <div class="popup popup-payment">
+            <div class="popup-table table">
+                <div class="cell">
+                    <div class="popup__content popup-login__content">
+                        <div class="popup-close"></div>
+                        <div class="popup__title">
+                            PAYMENT
+                        </div>
+                        <div class="popup-login__body body-login">
+                            <div class="body-login__first">
+                                <div class="body-login__first-info">
+                                    <h3 class="body-login__first-info-title">Enter your private key</h3>
+                                    <ol>
+                                        <li>Paste your private key</li>
+                                        <li>Press LOGIN</li>
+                                    </ol>
+                                </div>
+                                <form action="#" class="body-login__first-form form-login">
+                                    <div class="form-login__input-box">
+                                        <input autocomplete="off" type="text" name="form[]" placeholder="Input value"
+                                            class="input form-login__input req clipboard-results">
+                                        <img class="form-login__input-refresh" src="img/login-refresh.svg"
+                                            alt="refresh">
+                                        <img class="form-login__input-warning" src="img/invoice-warning-1.png" alt="#">
+                                    </div>
+                                    <div class="form-login__buttons buttons-login">
+                                        <button class="button-login button-login_paste" type="button">paste</button>
+                                        <button class="button-login button-login_login" type="submit">login</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="body-login__or">
+                                <span>or</span>
+                            </div>
+                            <div class="body-login__second">
+                                <a href="#" class="body-login__second-link">
+                                    login with <span></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- POPUP FORWARD LOGIN  -->
+        <div class="popup popup-login">
+            <div class="popup-table table">
+                <div class="cell">
+                    <div class="popup__content popup-login__content">
+                        <div class="popup-close"></div>
+                        <div class="popup__title popup-login__title">
+                            LOGIN
+                        </div>
+                        <div class="popup-login__body body-login">
+                            <div class="body-login__first-info">
+                                <h3 class="body-login__first-info-title">PARTNERS BACKOFFICE</h3>
+                                <p class="body-login__first-info-text">
+                                    Now you will be redirected to the <a class="notranslate" href="#">backoffice.16bit.partners</a> where you can to login with the EOS private key or&nbsp;SCATTER.
+                                </p>
+                            </div>
+                            <!-- <div class="body-login__second-info"> -->
+                                <!-- <p class="body-login__second-info-text">
+                                    Please copy key before you will continue.
+                                </p> -->
+                                <!-- <div class="body-login__key">
+                                    Key: <span id="key4">e6eyj56en6wsjwss2w56jwssjrjfge567e5rjfge567e5</span> -->
+                                    <!-- <img
+                                        src="img/copy-icon.png" alt="Copy" class="btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#key3"> -->
+                                        <!-- <button class="copy-btn btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#key4"></button>
+                                </div> -->
+                            <!-- </div> -->
+                        </div>
+                        <div class="popup-login__buttons">
+                            <button class="popup-login__btn-cancel">CANCEL</button>
+                            <a href="autentification.html" class="popup-login__btn-continue">continue</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup popup-login-2">
+            <div class="popup-table table">
+                <div class="cell">
+                    <div class="popup__content popup-login__content">
+                        <div class="popup-close"></div>
+                        <div class="popup__title popup-login__title">
+                            LOGIN
+                        </div>
+                        <div class="popup-login__body body-login">
+                            <div class="body-login__first-info">
+                                <h3 class="body-login__first-info-title">PARTNERS BACKOFFICE</h3>
+                                <p class="body-login__first-info-text">
+                                    Now you will be redirected to the <a class="notranslate" href="#">backoffice.16bit.partners</a> where you can to login with the EOS private key or&nbsp;SCATTER.
+                                </p>
+                            </div>
+                            <div class="body-login__second-info">
+                                <p class="body-login__second-info-text">
+                                    Please copy key before you will continue.
+                                </p>
+                                <div class="body-login__key">
+                                    Key: <span id="key4">e6eyj56en6wsjwss2w56jwssjrjfge567e5rjfge567e5</span>
+                                    <!-- <img
+                                        src="img/copy-icon.png" alt="Copy" class="btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#key3"> -->
+                                        <button class="copy-btn btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#key4"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup-login__buttons">
+                            <button class="popup-login__btn-cancel">CANCEL</button>
+                            <a href="autentification.html" class="popup-login__btn-continue">continue</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- POPUP START BUSINESS -->
+        <div class="popup popup-business">
+            <div class="popup-table table">
+                <div class="cell">
+                    <div class="popup__content popup-business__content">
+                        <div class="popup-close"></div>
+                        <div class="popup-business-title">DO YOU HAVE EOS WALLET?</div>
+                        <div class="business-img">
+                            <img src="img/business.png" alt="#">
+                        </div>
+                        <div class="business-btns">
+                            <a href="autentification.html" class="business-btn">YES</a>
+                            <a href="#details" class="business-btn pl">NO</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- POPUP DETAILES -->
+        <div class="popup popup-details">
+            <div class="popup-table table">
+                <div class="cell">
+                    <div class="popup__content popup-details__content">
+                        <div class="popup-close"></div>
+                        <div class="popup__title popup-details__title">
+                            YOUR ACCOUNT DETAILS
+                        </div>
+                        <div class="popup-details__header">
+                            Name EOS: <span class="notranslate">miamibeach</span>
+                        </div>
+                        <div class="popup-details__keys">
+                            <div class="popup-details__keys-header">
+                                KEYS <span></span>
+                            </div>
+                            <div class="popup-details__keys-body body-keys">
+                                <div class="body-keys__item">
+                                    <div class="body-keys__item-title">owner</div>
+                                    <p class="body-keys__item-subtitle">
+                                        <span id="key1" class="key">5Jwds2iR7gfPG5Jwds2iR7gf</span><button class="copy-btn btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#key1">copy all</button>
+                                    </p>
+                                </div>
+                                <div class="body-keys__item">
+                                    <div class="body-keys__item-title">active</div>
+                                    <p class="body-keys__item-subtitle">
+                                        <span id="key2" class="key">5Jwds2iR7gfPG5Jwds2iR7gf</span><button class="copy-btn btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#key2">copy all</button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup-details__account-info">
+                            <p class="popup-details__account-info-title">Link to your account:</p>
+                            <div class="popup-details__account-info-link">
+                                <a id="account-link" href="#">https://pac.16bit.game/miamibeach</a>
+                                <button class="copy-btn btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#account-link">copy all</button>
+                            </div>
+                            <button class="body-keys__btn btn-clipboard" data-clipboard-action="copy"
+                            data-clipboard-target=".private-key">COPY ALL<img src="img/copy-icon.png" alt="Copy"></button>
+                        </div>
+                        <div class="popup-details__warning">
+                            <img src="img/warning.png" alt="warning">warning
+                        </div>
+                        <div class="popup-details__info">
+                            <p>
+                                <span>Please save your private keys in somewhere!</span>
+                                <span>And remember this way.</span>
+                            </p>
+                            <p>
+                                If suddenly you can’t regain access to your account, that nobody can do this during 1
+                                month.
+                            </p>
+                            <p>
+                                After that period the Admin of the system will be able to restore it.
+                            </p>
+                            <label class="check-terms__label">
+                                <input for="checkTermsOfUse" id="check-option-1" class="check check-terms" type="checkbox">
+                                <span class="check-lic"></span>
+                                I&nbsp;understood&nbsp;everything&nbsp;right <br>
+                                and&nbsp;securely&nbsp;saved&nbsp;my&nbsp;keys
+                            </label>
+                        </div>
+                        <div class="popup-details__buttons">
+                            <button class="popup-details__btn-cancel">CANCEL</button>
+                            <button form="checkTermsOfUse" id="popup-details__btn-continue" class="popup-details__btn-continue" type="submite">continue</button>
+                        </div>
+                        <form id="checkTermsOfUse" action="payment.html"></form>
+                    </div>
+                </div>
+            </div>
+            <p class="visually-hidden private-key">
+                Your private keys from backoffice.16bit.partners<br>
+                Owner: <span class="notranslate">5JFVT7qHKaZnKJm5pLLddK42c4Ns</span><br>
+                Active: <span class="notranslate">ddK42c4NsSGZpsDJEkZB8SdLdMau</span><br>
+                Link to your virtual office: https://onyx.16Bit.partners/maimibeach
+            </p>
+        </div>
+
+
+        <!-- HEADER -->
+        <header class="header">
+            <div class="container header__container">
+                <div class="header__logo">
+                    <a href="#" title="16Bit.game"><img src="img/logo.svg" alt="Logo"><span class="notranslate">franchising</span></a>
+                </div>
+                
+                <div class="header__translate">
+                    <div class="header__translate-flag-box">
+                        <img src="img/flags/en.png" alt="africaans" class="header__translate-flag">
+                    </div>
+                    <select class="header__translate-select" id="select-lang" onchange="showPrefferedOptions(this);doGTranslate(this);">
+                        <!-- <option value="">Select Language</option> -->
+                        <option value="en|af">Afrikaans</option>
+                        <option value="en|sq">Albanian</option>
+                        <option value="en|ar">Arabic</option>
+                        <option value="en|hy">Armenian</option>
+                        <option value="en|az">Azerbaijani</option>
+                        <option value="en|eu">Basque</option>
+                        <option value="en|be">Belarusian</option>
+                        <option value="en|bg">Bulgarian</option>
+                        <option value="en|ca">Catalan</option>
+                        <option value="en|zh-CN">Chinese (Simplified)</option>
+                        <option value="en|zh-TW">Chinese (Traditional)</option>
+                        <option value="en|hr">Croatian</option>
+                        <option value="en|cs">Czech</option>
+                        <option value="en|da">Danish</option>
+                        <option value="en|nl">Dutch</option>
+                        <option value="en|en" selected>English</option>
+                        <option value="en|et">Estonian</option>
+                        <option value="en|tl">Filipino</option>
+                        <option value="en|fi">Finnish</option>
+                        <option value="en|fr">French</option>
+                        <option value="en|gl">Galician</option>
+                        <option value="en|ka">Georgian</option>
+                        <option value="en|de">German</option>
+                        <option value="en|el">Greek</option>
+                        <option value="en|ht">Haitian Creole</option>
+                        <option value="en|iw">Hebrew</option>
+                        <option value="en|hi">Hindi</option>
+                        <option value="en|hu">Hungarian</option>
+                        <option value="en|is">Icelandic</option>
+                        <option value="en|id">Indonesian</option>
+                        <option value="en|ga">Irish</option>
+                        <option value="en|it">Italian</option>
+                        <option value="en|ja">Japanese</option>
+                        <option value="en|ko">Korean</option>
+                        <option value="en|lv">Latvian</option>
+                        <option value="en|lt">Lithuanian</option>
+                        <option value="en|mk">Macedonian</option>
+                        <option value="en|ms">Malay</option>
+                        <option value="en|mt">Maltese</option>
+                        <option value="en|no">Norwegian</option>
+                        <option value="en|fa">Persian</option>
+                        <option value="en|pl">Polish</option>
+                        <option value="en|pt">Portuguese</option>
+                        <option value="en|ro">Romanian</option>
+                        <option value="en|ru">Russian</option>
+                        <option value="en|sr">Serbian</option>
+                        <option value="en|sk">Slovak</option>
+                        <option value="en|sl">Slovenian</option>
+                        <option value="en|es">Spanish</option>
+                        <option value="en|sw">Swahili</option>
+                        <option value="en|sv">Swedish</option>
+                        <option value="en|th">Thai</option>
+                        <option value="en|tr">Turkish</option>
+                        <option value="en|uk">Ukrainian</option>
+                        <option value="en|ur">Urdu</option>
+                        <option value="en|vi">Vietnamese</option>
+                        <option value="en|cy">Welsh</option>
+                        <option value="en|yi">Yiddish</option>
+                    </select>
+                    <div id="google_translate_element2"></div>
+                </div>
+                <a href="#payment" class="header__btn pl">
+                    <span>
+                        <svg id="Layer_1" enable-background="new 0 0 512 512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <path d="m512 163v-27c0-30.928-25.072-56-56-56h-400c-30.928 0-56 25.072-56 56v27c0 2.761 2.239 5 5 5h502c2.761 0 5-2.239 5-5z"/>
+                                <path d="m0 205v171c0 30.928 25.072 56 56 56h400c30.928 0 56-25.072 56-56v-171c0-2.761-2.239-5-5-5h-502c-2.761 0-5 2.239-5 5zm128 131c0 8.836-7.164 16-16 16h-16c-8.836 0-16-7.164-16-16v-16c0-8.836 7.164-16 16-16h16c8.836 0 16 7.164 16 16z"/>
+                            </g>
+                        </svg>
+                    </span>
+                    Payment
+                </a>
+                <a href="#login" class="header__btn pl">
+                    <span>
+                        <svg id="Слой_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 467.93 469">
+                            <title>logout</title>
+                            <path class="cls-1"
+                                d="M468.27,234.5c0,129.51-105,234.5-234.5,234.5C111.45,469,11.12,375.33.33,255.82h190.8v64a21.31,21.31,0,0,0,36.39,15.07l85.28-85.27a21.3,21.3,0,0,0,0-30.14l-85.28-85.28a21.31,21.31,0,0,0-36.39,15.07v64H.33C11.12,93.67,111.45,0,233.77,0,363.28,0,468.27,105,468.27,234.5Z"
+                                transform="translate(-0.33 0)" />
+                        </svg>
+                    </span>
+                    Login
+                </a>
+            </div>
+        </header>
+
+
+
+        <!-- <MAIN> -->
+        <main class="main">
+            <!-- MAJOR -->
+            <section class="major" id="major">
+                <div class="container major__container">
+                    <div class="major__content">
+                        <div class="major__content-column">
+                            <h2 class="major__title">
+                                <span>Honest</span> Blockchain Game
+                            </h2>
+                            <p class="major__subtitle">Great Business Opportunity</p>
+                            <p class="major__text">
+                                <span>Here and just now you have a real chance to start your own
+                                    online-business in few minutes.</span>
+                                <span>
+                                    For getting more information about <a class="notranslate" href="#">16Bit.game</a>, please, see
+                                    the
+                                    project.
+                                </span>
+                            </p>
+                            <a href="docs/16Bit.game Project 2020 (ENG).pdf" target="_blank" class="major__link">See the project</a>
+                        </div>
+                        <div class="major__content-column">
+                            <div class="major__bg-image">
+                                <img class="major__bg-image_1" src="img/major-image.png" alt="#">
+                                <img class="major__bg-image_2" src="img/major-image-1.png" alt="#">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CHOOSE YOUR FRANCHISE -->
+            <section class="franchise" id="franchise">
+                <div class="container franchise__container">
+                    <h2 class="title franchise__title">CHOOSE YOUR FRANCHISE</h2>
+                    <div class="franchise__content">
+                        <div class="franchise__content-header">
+                            <img src="img/star.png" alt="star">
+                            <span>GENERAL PARTNER</span>
+                            <img src="img/star.png" alt="star">
+                        </div>
+                        <div class="franchise__content-body">
+                            <div class="franchise__properties properties">
+                                <div class="properties__row">
+                                    <p class="properties__price property-price">Price</p>
+                                    <p class="properties__price-value property-price-value">10.000 <span>EOS</span></p>
+                                </div>
+                                <div class="properties__row">
+                                    <div class="properties__column">
+                                        <p class="property__name">Depth:</p>
+                                        <p class="property__value">no limit</p>
+                                    </div>
+                                    <div class="properties__column">
+                                        <p class="property__name">Shares:</p>
+                                        <p class="property__value">50-70%</p>
+                                    </div>
+                                    <div class="properties__column">
+                                        <p class="property__name">Referral Lifecycle:</p>
+                                        <p class="property__value">no limit</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="franchise__text">
+                                <h3 class="franchise__text-title">General Partner</h3>
+                                <p class="franchise__text-desc">The General Partner franchise is the official
+                                    full-fledged and independent branch of
+                                    <a class="notranslate" href="#">16Bit.game</a>. At its core, it is its own superannuation online
+                                    business with a constant growth trend. A feature of the General pact is that after
+                                    the end of the
+                                    life period, all referrals from all the built structure are forever assigned to the
+                                    General. That is, the referral in the period of its life pays a commission to the
+                                    dealer, and as this period ends, the referral is forever assigned to the General.
+                                </p>
+                                <p class="franchise__text-desc">And another pleasant feature is the possibility of the
+                                    General's income up to 70% of
+                                    the profit received, the terms of cooperation are discussed personally with the
+                                    <a class="notranslate" href="#">16Bit.game</a> Service Administrator.
+                                </p>
+                                <p class="franchise__text-desc">
+                                    If you want to get a General 16Bit franchise, please email us, write few words about
+                                    yourself and how you're going to develop the project.
+                                </p>
+                            </div>
+                            <form action="#thanks" class="franchise__form form-franchise" data-ms="ms_1">
+                                <div class="form-franchise__row">
+                                    <textarea class="textarea input req message" name="Message"
+                                        placeholder="Message..."></textarea>
+                                </div>
+                                <div class="form-franchise__row">
+                                    <input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+                                        placeholder="Your email" class="input req email">
+                                    <button class="form-franchise__btn" type="submit">SEND</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- CARD -->
+                    <div class="franchise__item item-franchise" id="superdealer">
+                        <div class="item-franchise__desc desc-franchise">
+                            <h3 class="title desc-franchise__title">super dealer</h3>
+                            <h4 class="desc-franchise__subtitle">Most Profitable</h4>
+                            <p>The most productive package.<br> For those who want to immediately start at the maximum.<br> The highest share of profit is 50%, referrals pay the commission for as long as three years.<br>
+                            Penetration depth is an infinite number of levels.<br> Franchise validity is not limited.
+                            </p>
+                        </div>
+                        <div class="item-franchise__card card">
+                            <div class="card__header card__header_green">super dealer</div>
+                            <div class="card__item card__item_price">
+                                <p class="card__item-name property-price">Price</p>
+                                <p class="card__item-value property-price-value">1500 <span>EOS</span></p>
+                            </div>
+                            <div class="card__item">
+                                <p class="card__item-name property__name">Depth:</p>
+                                <p class="card__item-value property__value">no limit</p>
+                            </div>
+                            <div class="card__item">
+                                <p class="card__item-name property__name">Shares:</p>
+                                <p class="card__item-value property__value">50%</p>
+                            </div>
+                            <div class="card__item">
+                                <p class="card__item-name property__name">Referral Lifecycle:</p>
+                                <p class="card__item-value property__value">3 years</p>
+                            </div>
+                            <div class="card__footer">
+                                <a class="card__footer-btn pl" href="#business">buy now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CARD -->
+                    <div class="franchise__item item-franchise item-franchise_reverse" id="dealer">
+                        <div class="item-franchise__desc desc-franchise desc-franchise_reverse">
+                            <h3 class="title desc-franchise__title">dealer</h3>
+                            <h4 class="desc-franchise__subtitle">Most Popular</h4>
+                            <p>A good start with a prospect.<br> For those who want to start a business without high
+                                financial risks, but with high profitability - a share - 45% and with an increased
+                                period of life of referrals - 2 years.<br> Penetration depth is an infinite number of
+                                levels.<br> Franchise validity is not limited.<br> At any time, you can upgrade to the Super
+                                Dealer level for 500 EOS.</p>
+                        </div>
+                        <div class="item-franchise__card card card_reverse">
+                            <div class="card__header card__header_aqua">dealer</div>
+                            <div class="card__item card__item_price">
+                                <p class="card__item-name property-price">Price</p>
+                                <p class="card__item-value property-price-value">1000 <span>EOS</span></p>
+                            </div>
+                            <div class="card__item">
+                                <p class="card__item-name property__name">Depth:</p>
+                                <p class="card__item-value property__value">no limit</p>
+                            </div>
+                            <div class="card__item">
+                                <p class="card__item-name property__name">Shares:</p>
+                                <p class="card__item-value property__value">45%</p>
+                            </div>
+                            <div class="card__item">
+                                <p class="card__item-name property__name">Referral Lifecycle:</p>
+                                <p class="card__item-value property__value">2 years</p>
+                            </div>
+                            <div class="card__footer">
+                                <a class="card__footer-btn pl" href="#business">buy now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CARD -->
+                    <div class="franchise__item item-franchise" id="subdealer">
+                        <div class="item-franchise__desc desc-franchise">
+                            <h3 class="title desc-franchise__title">sub dealer</h3>
+                            <h4 class="desc-franchise__subtitle">For Beginners</h4>
+                            <p>The ideal starting point for those who want to try their hand at online business without
+                                financial risks.<br> In this package, not the most favorable terms of cooperation (40% of
+                                profits and 1 year of referrals), but the cost of the franchise is only 500 EOS. For
+                                this money you will be able to understand all the specifics of the business and check
+                                the performance of the system, all the subtleties and features.<br> Franchise validity is not limited.<br> At any time, you can
+                                upgrade the tariff to Dealer for 500 EOS, and to Super Dealer for 1000 EOS.</p>
+                        </div>
+                        <div class="item-franchise__card card">
+                            <div class="card__header card__header_orange">sub dealer</div>
+                            <div class="card__item card__item_price">
+                                <p class="card__item-name property-price">Price</p>
+                                <p class="card__item-value property-price-value">500 <span>EOS</span></p>
+                            </div>
+                            <div class="card__item">
+                                <p class="card__item-name property__name">Depth:</p>
+                                <p class="card__item-value property__value">no limit</p>
+                            </div>
+                            <div class="card__item">
+                                <p class="card__item-name property__name">Shares:</p>
+                                <p class="card__item-value property__value">40%</p>
+                            </div>
+                            <div class="card__item">
+                                <p class="card__item-name property__name">Referral Lifecycle:</p>
+                                <p class="card__item-value property__value">1 year</p>
+                            </div>
+                            <div class="card__footer">
+                                <a class="card__footer-btn pl" href="#business">buy now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- HOW IT WORKS -->
+            <section class="works" id="works">
+                <div class="container works__container">
+                    <div class="works__image">
+                        <div class="works__image-sky">
+                            <img src="img/sky.png" alt="sky">
+                        </div>
+                        <img class="works__image_1" src="img/works-img-1.svg" alt="Logo Sun">
+                        <div class="image-tree">
+                            <img class="works__image_2" src="img/works-img-2.svg" alt="Partners Tree">
+                            <div class="image-text__box">
+                                <span class="works__image-text works__image-text-1">Profit</span>
+                                <span class="works__image-text works__image-text-2">Referrals</span>
+                                <span class="works__image-text works__image-text-3">Dealers</span>
+                            </div>
+                            <span class="works__image-text works__image-text-4">General partner</span>
+                        </div>
+                    </div>
+                    <h2 class="title works__title">HOW IT WORKS</h2>
+                    <div class="works__content">
+                        <div class="works__content-column">
+                            <p>
+                                In our partner program, everything is harmonious as in nature.
+                                The organicity and reliability of the structure can be shown by the example of a tree under the sun.
+                            </p>
+                            <p>
+                                The sun is a <a class="notranslate" href="#">16Bit.game</a>, a pristine source of energy without which nothing will grow.
+                            </p>
+                            <p>
+                                The basis: the roots and trunk of the tree are the General Partner, which forms the structure and ensures the stability of the entire system.
+                            </p>
+                            <p>
+                                Branches are dealers who develop the structure.
+                            </p>
+                            <p>
+                                Leafs on branches are referrals, they give additional necessary energy to the system.
+                            </p>
+                        </div>
+                        <div class="works__content-column">
+                            <p>
+                                In total, as a result of the joint activities of all participants in the system, fruits are obtained - this is profit.
+                            </p>
+                            <p>
+                                All participants receive a share proportional to their participation in the profit process, according to the terms of the franchise.
+                            </p>
+                            <p>
+                                All partners and dealers can develop their own structure to infinite heights.
+                            </p>
+                            <p>
+                                The franchise is unlimited.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="works__link-box">
+                        <a href="docs/16Bit.game%20Project%202020%20(ENG).pdf" target="_blank" class="works__link ">MARKETING PLAN</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- STEPS -->
+            <section class="steps" id="steps">
+                <div class="container steps__container">
+                    <h3 class="title steps__title">3 simple steps</h3>
+                    <form action="#" id="steps-form" class="visually-hidden"></form>
+                    <div class="steps__subtitle">
+                        <span>Only 3 steps and you are in the GAME!</span>
+                    </div>
+                    <div class="steps__content">
+                        <div class="steps__content-column">
+                            <div class="step-item">
+                                <div class="step-item__header">
+                                    <span class="step-num step-num_aqua">1</span> choose
+                                </div>
+                                <div class="step-item__body">
+                                    <div class="step-item__choose-item item-choose">
+                                        <label class="item-choose__label item-choose__label_green">
+                                            <input class="item-choose__input" name="franchise" type="radio"
+                                                form="steps-form" checked>
+                                            <span class="check__box"></span>
+                                            SUPER DEALER
+                                        </label>
+                                        <div class="item-choose__info">
+                                            <div class="item-choose__info-name">3 Years</div>
+                                            <div class="item-choose__info-percent">50%</div>
+                                            <div class="item-choose__info-price">1500 EOS</div>
+                                        </div>
+                                    </div>
+                                    <div class="step-item__choose-item item-choose">
+                                        <label class="item-choose__label item-choose__label_aqua">
+                                            <input class="item-choose__input" name="franchise" type="radio"
+                                                form="steps-form">
+                                            <span class="check__box"></span>
+                                            DEALER
+                                        </label>
+                                        <div class="item-choose__info">
+                                            <div class="item-choose__info-name">2 Years</div>
+                                            <div class="item-choose__info-percent">45%</div>
+                                            <div class="item-choose__info-price">1000 EOS</div>
+                                        </div>
+                                    </div>
+                                    <div class="step-item__choose-item item-choose">
+                                        <label class="item-choose__label item-choose__label_orange">
+                                            <input class="item-choose__input" name="franchise" type="radio"
+                                                form="steps-form">
+                                            <span class="check__box"></span>
+                                            SUB DEALER
+                                        </label>
+                                        <div class="item-choose__info">
+                                            <div class="item-choose__info-name">1 Year</div>
+                                            <div class="item-choose__info-percent">40%</div>
+                                            <div class="item-choose__info-price">500 EOS</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="step-item__footer">
+                                    Choose the franchise package <br> that suits you
+                                </div>
+                            </div>
+                        </div>
+                        <div class="steps__content-column">
+                            <div class="step-item">
+                                <div class="step-item__header">
+                                    <span class="step-num step-num_orange">2</span> pay
+                                </div>
+                                <div class="step-item__body item-payvar">
+                                    <div class="item-payvar__currency currency-pay">
+                                        <label class="currency-pay__item">
+                                            <input class="item-choose__input" name="pay" type="radio" form="steps-form"
+                                                checked>
+                                            <span class="check__box"></span>
+                                            <span class="currency-pay__item-top">
+                                                <span class="currency-pay__item-name">EOS</span>
+                                                <span class="currency-pay__item-desc">Instant payment</span>
+                                                <img src="img/icon-EOS.png" alt="EOS">
+                                            </span>
+                                        </label>
+                                        <label class="currency-pay__item">
+                                            <input class="item-choose__input" name="pay" type="radio" form="steps-form">
+                                            <span class="check__box"></span>
+                                            <span class="currency-pay__item-bot">
+                                                <span class="currency-pay__name">OTHER CRYPTO</span>
+                                                <span class="currency-pay__item-desc">5 minutes</span>
+                                                <img src="img/icon-crypto.png" alt="Crypto">
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="currency-pay currency-pay_card">
+                                        <label class="item-choose__label item-choose__label_gray">
+                                            <input class="item-choose__input" name="pay" type="radio" form="steps-form">
+                                            <span class="check__box"></span>
+                                            <img src="img/icon-pay.png" alt="Pay">
+                                            <span class="item-choose__label-text">CREDIT CARD</span>
+                                            <span class="item-choose__label-desc">5 minutes</span>
+                                        </label>
+                                        <div class="choose__pay-card">
+                                            <img src="img/visa-logo.png" alt="Visa">
+                                            <img src="img/mastercard-logo.png" alt="Mastercard">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="step-item__footer">
+                                    Pay&nbsp;for&nbsp;your&nbsp;franchise in&nbsp;any&nbsp;convenient&nbsp;way
+                                </div>
+                            </div>
+                        </div>
+                        <div class="steps__content-column">
+                            <div class="step-item">
+                                <div class="step-item__header">
+                                    <span class="step-num step-num_green">3</span> get
+                                </div>
+                                <div class="step-item__body">
+                                    <img src="img/mac2.png" alt="#">
+                                </div>
+                                <a href="#business" class="step-item__btn pl">START BUSINESS</a>
+                                <div class="step-item__footer">
+                                    Get your own online business <br> in just a few minutes
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PARTENRS -->
+            <section class="partners" id="partners">
+                <div class="container partners__container">
+                    <div class="partners__image">
+                        <img src="img/partners-image.png" alt="#">
+                    </div>
+                    <h2 class="title partners__title">PARTNER'S VIRTUAL OFFICE</h2>
+                    <div class="partners__content">
+                        <div class="partners__content-column">
+                            <p>
+                                The General Partner and all dealers (invited partners in the General structure) get
+                                access
+                                to the personal account, which is intended for convenient control of the network
+                                development.
+                            </p>
+                            <p>
+                                The Cabinet provides complete and clear statistics on all useful actions of
+                                users of the 16Bit.game service, such as the number of visits and registrations, account
+                                replenishment, game results for each referral, a complete tree of the entire structure
+                                and
+                                financial results both in General and for each
+                                dealer separately.
+                            </p>
+                        </div>
+                        <div class="partners__content-column">
+                            <p>
+                                The Cabinet functionality allows you to change the EOS wallet for
+                                Commission withdrawal.
+                                Commissions are paid once a month at the initiative of the system Administrator.
+                            </p>
+                            <div class="partners__key">
+                                Key: <span id="key3">e6eyj56en6wsjwss2w56jwssjrjfge567e5rjfge567e5</span>
+                                <!-- <img
+                                    src="img/copy-icon.png" alt="Copy" class="btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#key3"> -->
+                                    <button class="copy-btn btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#key3"></button>
+                            </div>
+                            <a class="partners__link pl" href="#login-2">SEE VIRTUAL OFFICE</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="container footer-top__container">
+                    <div class="footer-top__column">
+                        <p class="footer__tagline">Let's Play</p>
+                        <p class="footer__tagline">Just For Fun</p>
+                    </div>
+                    <div class="footer-top__column">
+                        <a class="footer__btn" href="https://app.16Bit.game" target="_blank">Try Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-middle">
+                <div class="container footer-middle__container">
+                    <nav class="footer-middle__menu">
+                        <div class="footer-middle__menu-column">
+                            <ul class="footer-middle__menu-list list-menu">
+                                <li><a href="#major" class="list-menu__link anchors">Start</a></li>
+                                <li><a href="#franchise" class="list-menu__link anchors">General Partner</a></li>
+                                <li><a href="#superdealer" class="list-menu__link anchors">Super Dealer</a></li>
+                                <li><a href="#dealer" class="list-menu__link anchors">Dealer</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-middle__menu-column">
+                            <ul class="footer-middle__menu-list list-menu">
+                                <li><a href="#subdealer" class="list-menu__link anchors">Sub Dealer</a></li>
+                                <li><a href="#works" class="list-menu__link anchors">How it works</a></li>
+                                <li><a href="#steps" class="list-menu__link anchors">3 Simple steps</a></li>
+                                <li><a href="#partners" class="list-menu__link anchors">Partners’s office</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container footer-bottom__container">
+                    <img class="footer__image" src="img/tel2.png" alt="#">
+                    <div class="footer-bottom__column">
+                        <a href="#" title="16Bit.game"><img src="img/logo.svg" alt="Logo"></a>
+                    </div>
+                    <div class="footer-bottom__column">
+                        <a class="footer-bottom__mail-link notranslate" href="mailto:info@email.ru"><img
+                                src="img/footer-mail.svg" alt="#">partner@16Bit.game</a>
+                    </div>
+                    <div class="footer-bottom__column">
+                        <!-- <a class="footer-bottom__terms-link" href="#">Terms of use</a> -->
+                        <span class="footer-bottom__copyright">
+                            2020 &#169;
+                            <a class="footer__site-link notranslate" href="#">16Bit</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    
+
+
+
+    <!-- jQuery -->
+    <script src="libs/jquery-3.4.1.min.js"></script>
+    <!-- Clipboard -->
+    <script src="libs/clipboard.min.js"></script>
+    <!-- SCRIPTS -->
+    <script src="js/script.js"></script>
+
+    <script>
+        function googleTranslateElementInit2() { new google.translate.TranslateElement({ pageLanguage: 'en', autoDisplay: false }, 'google_translate_element2'); }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
+
+    <script>
+        // /* <![CDATA[ */
+        eval(function (p, a, c, k, e, r) { e = function (c) { return (c < a ? '' : e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(36)) }; if (!''.replace(/^/, String)) { while (c--) r[e(c)] = k[c] || e(c); k = [function (e) { return r[e] }]; e = function () { return '\\w+' }; c = 1 }; while (c--) if (k[c]) p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]); return p }('6 7(a,b){n{4(2.9){3 c=2.9("o");c.p(b,f,f);a.q(c)}g{3 c=2.r();a.s(\'t\'+b,c)}}u(e){}}6 h(a){4(a.8)a=a.8;4(a==\'\')v;3 b=a.w(\'|\')[1];3 c;3 d=2.x(\'y\');z(3 i=0;i<d.5;i++)4(d[i].A==\'B-C-D\')c=d[i];4(2.j(\'k\')==E||2.j(\'k\').l.5==0||c.5==0||c.l.5==0){F(6(){h(a)},G)}g{c.8=b;7(c,\'m\');7(c,\'m\')}}', 43, 43, '||document|var|if|length|function|GTranslateFireEvent|value|createEvent||||||true|else|doGTranslate||getElementById|google_translate_element2|innerHTML|change|try|HTMLEvents|initEvent|dispatchEvent|createEventObject|fireEvent|on|catch|return|split|getElementsByTagName|select|for|className|goog|te|combo|null|setTimeout|500'.split('|'), 0, {}))
+    // /* ]]> */
+    </script>
+</body>
+
+</html>

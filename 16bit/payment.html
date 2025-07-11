@@ -1,0 +1,1950 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16BIT.payment</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.min.css">
+    <script>
+        function showPrefferedOptions(oSelect) {
+            var aOptionsValues = [];
+            var aOptions = getSelectedIndexes(oSelect);
+            for (var i = 0; i < aOptions.length; i++) {
+                aOptionsValues.push(aOptions[i].substring(3));
+            }
+            document.querySelector('.header__translate-flag').src = 'img/flags/' + aOptionsValues + '.png';
+        }
+        function getSelectedIndexes(oSelect) {
+            var aSelected = [];
+            for (var i = 0; i < oSelect.options.length; i++) {
+                if (oSelect.options[i].selected) {
+                    aSelected.push(oSelect.options[i].getAttribute('value'));
+                }
+            }
+            
+            return aSelected;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <!-- COMMUNICATION BUTTON -->
+        <div class="comm-btn">
+            <div class="dws">
+                <div class="pulse">
+                    <div class="bloc"></div>
+                    <div class="phone"><img src="img/chat.svg" alt="Message"></div>
+                    <div class="text notranslate">SUPPORT <br> 24/7</div>
+                </div>
+            </div>
+            <p class="comm-btn__text notranslate">CHAT ME</p>
+        </div>
+
+        <!-- BUTTON SCROLL UP -->
+        <!-- <button class="btn__scroll-up up">
+            <?xml version="1.0" encoding="iso-8859-1"?>
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 256 256" style="enable-background:new 0 0 256 256;" xml:space="preserve">
+                <g>
+                    <g>
+                        <polygon points="128,48.907 0,176.907 30.187,207.093 128,109.28 225.813,207.093 256,176.907 		"/>
+                    </g>
+                </g>
+            </svg>
+        </button> -->
+
+        <!-- POPUP FORWARD LOGIN  -->
+        <div class="popup popup-login">
+            <div class="popup-table table">
+                <div class="cell">
+                    <div class="popup__content popup-login__content">
+                        <div class="popup-close"></div>
+                        <div class="popup__title popup-login__title">
+                            LOGIN
+                        </div>
+                        <div class="popup-login__body body-login">
+                            <div class="body-login__first-info">
+                                <h3 class="body-login__first-info-title">PARTNERS BACKOFFICE</h3>
+                                <p class="body-login__first-info-text">
+                                    Now you will be redirected to the <a class="notranslate" href="#">backoffice.16bit.partners</a> where you can to login with the EOS private key or&nbsp;SCATTER.
+                                </p>
+                            </div>
+                            <!-- <div class="body-login__second-info"> -->
+                                <!-- <p class="body-login__second-info-text">
+                                    Please copy key before you will continue.
+                                </p> -->
+                                <!-- <div class="body-login__key">
+                                    Key: <span id="key4">e6eyj56en6wsjwss2w56jwssjrjfge567e5rjfge567e5</span> -->
+                                    <!-- <img
+                                        src="img/copy-icon.png" alt="Copy" class="btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#key3"> -->
+                                        <!-- <button class="copy-btn btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#key4"></button>
+                                </div> -->
+                            <!-- </div> -->
+                        </div>
+                        <div class="popup-login__buttons">
+                            <button class="popup-login__btn-cancel">CANCEL</button>
+                            <a href="autentification.html" class="popup-login__btn-continue">continue</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- POPUP PAYMENT -->
+        <div class="popup popup-payment">
+            <div class="popup-table table">
+                <div class="cell">
+                    <div class="popup__content popup-login__content">
+                        <div class="popup-close"></div>
+                        <div class="popup__title">
+                            PAYMENT
+                        </div>
+                        <div class="popup-login__body body-login">
+                            <div class="body-login__first">
+                                <div class="body-login__first-info">
+                                    <h3 class="body-login__first-info-title">Enter your private key</h3>
+                                    <ol>
+                                        <li>Paste your private key</li>
+                                        <li>Press LOGIN</li>
+                                    </ol>
+                                </div>
+                                <form action="#" class="body-login__first-form form-login">
+                                    <div class="form-login__input-box">
+                                        <input autocomplete="off" type="text" name="form[]" placeholder="Input value"
+                                            class="input form-login__input req clipboard-results">
+                                        <img class="form-login__input-refresh" src="img/login-refresh.svg"
+                                            alt="refresh">
+                                        <img class="form-login__input-warning" src="img/invoice-warning-1.png" alt="#">
+                                    </div>
+                                    <div class="form-login__buttons buttons-login">
+                                        <button class="button-login button-login_paste" type="button">paste</button>
+                                        <button class="button-login button-login_login" type="submit">login</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="body-login__or">
+                                <span>or</span>
+                            </div>
+                            <div class="body-login__second">
+                                <a href="#" class="body-login__second-link">
+                                    login with <span></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HEADER -->
+        <header class="header">
+            <div class="container header__container">
+                <div class="header__logo">
+                    <a href="#" title="16Bit.game"><img src="img/logo.svg" alt="Logo"><span class="notranslate">franchising</span></a>
+                </div>
+                
+                <div class="header__translate">
+                    <div class="header__translate-flag-box">
+                        <img src="img/flags/en.png" alt="africaans" class="header__translate-flag">
+                    </div>
+                    <select class="header__translate-select" id="select-lang" onchange="showPrefferedOptions(this);doGTranslate(this);">
+                        <!-- <option value="">Select Language</option> -->
+                        <option value="en|af">Afrikaans</option>
+                        <option value="en|sq">Albanian</option>
+                        <option value="en|ar">Arabic</option>
+                        <option value="en|hy">Armenian</option>
+                        <option value="en|az">Azerbaijani</option>
+                        <option value="en|eu">Basque</option>
+                        <option value="en|be">Belarusian</option>
+                        <option value="en|bg">Bulgarian</option>
+                        <option value="en|ca">Catalan</option>
+                        <option value="en|zh-CN">Chinese (Simplified)</option>
+                        <option value="en|zh-TW">Chinese (Traditional)</option>
+                        <option value="en|hr">Croatian</option>
+                        <option value="en|cs">Czech</option>
+                        <option value="en|da">Danish</option>
+                        <option value="en|nl">Dutch</option>
+                        <option value="en|en" selected>English</option>
+                        <option value="en|et">Estonian</option>
+                        <option value="en|tl">Filipino</option>
+                        <option value="en|fi">Finnish</option>
+                        <option value="en|fr">French</option>
+                        <option value="en|gl">Galician</option>
+                        <option value="en|ka">Georgian</option>
+                        <option value="en|de">German</option>
+                        <option value="en|el">Greek</option>
+                        <option value="en|ht">Haitian Creole</option>
+                        <option value="en|iw">Hebrew</option>
+                        <option value="en|hi">Hindi</option>
+                        <option value="en|hu">Hungarian</option>
+                        <option value="en|is">Icelandic</option>
+                        <option value="en|id">Indonesian</option>
+                        <option value="en|ga">Irish</option>
+                        <option value="en|it">Italian</option>
+                        <option value="en|ja">Japanese</option>
+                        <option value="en|ko">Korean</option>
+                        <option value="en|lv">Latvian</option>
+                        <option value="en|lt">Lithuanian</option>
+                        <option value="en|mk">Macedonian</option>
+                        <option value="en|ms">Malay</option>
+                        <option value="en|mt">Maltese</option>
+                        <option value="en|no">Norwegian</option>
+                        <option value="en|fa">Persian</option>
+                        <option value="en|pl">Polish</option>
+                        <option value="en|pt">Portuguese</option>
+                        <option value="en|ro">Romanian</option>
+                        <option value="en|ru">Russian</option>
+                        <option value="en|sr">Serbian</option>
+                        <option value="en|sk">Slovak</option>
+                        <option value="en|sl">Slovenian</option>
+                        <option value="en|es">Spanish</option>
+                        <option value="en|sw">Swahili</option>
+                        <option value="en|sv">Swedish</option>
+                        <option value="en|th">Thai</option>
+                        <option value="en|tr">Turkish</option>
+                        <option value="en|uk">Ukrainian</option>
+                        <option value="en|ur">Urdu</option>
+                        <option value="en|vi">Vietnamese</option>
+                        <option value="en|cy">Welsh</option>
+                        <option value="en|yi">Yiddish</option>
+                    </select>
+                    <div id="google_translate_element2"></div>
+                </div>
+                <a href="#payment" class="header__btn pl">
+                    <span>
+                        <svg id="Layer_1" enable-background="new 0 0 512 512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <path d="m512 163v-27c0-30.928-25.072-56-56-56h-400c-30.928 0-56 25.072-56 56v27c0 2.761 2.239 5 5 5h502c2.761 0 5-2.239 5-5z"/>
+                                <path d="m0 205v171c0 30.928 25.072 56 56 56h400c30.928 0 56-25.072 56-56v-171c0-2.761-2.239-5-5-5h-502c-2.761 0-5 2.239-5 5zm128 131c0 8.836-7.164 16-16 16h-16c-8.836 0-16-7.164-16-16v-16c0-8.836 7.164-16 16-16h16c8.836 0 16 7.164 16 16z"/>
+                            </g>
+                        </svg>
+                    </span>
+                    Payment
+                </a>
+                <a href="#login" class="header__btn pl">
+                    <span>
+                        <svg id="Слой_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 467.93 469">
+                            <title>logout</title>
+                            <path class="cls-1"
+                                d="M468.27,234.5c0,129.51-105,234.5-234.5,234.5C111.45,469,11.12,375.33.33,255.82h190.8v64a21.31,21.31,0,0,0,36.39,15.07l85.28-85.27a21.3,21.3,0,0,0,0-30.14l-85.28-85.28a21.31,21.31,0,0,0-36.39,15.07v64H.33C11.12,93.67,111.45,0,233.77,0,363.28,0,468.27,105,468.27,234.5Z"
+                                transform="translate(-0.33 0)" />
+                        </svg>
+                    </span>
+                    Login
+                </a>
+            </div>
+        </header>
+
+        <section class="payment payment_shop tabs">
+            <div class="payment__container-white">
+                <div class="payment__container">
+                    <h2 class="title payment__title">
+                        <a class="btn-back" href="#" onclick="javascript:history.back(); return false;">
+                            back to franchises
+                            <?xml version="1.0" encoding="iso-8859-1"?>
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 443.52 443.52"
+                                style="enable-background:new 0 0 443.52 443.52;" xml:space="preserve">
+                                <g>
+                                    <g>
+                                        <path d="M143.492,221.863L336.226,29.129c6.663-6.664,6.663-17.468,0-24.132c-6.665-6.662-17.468-6.662-24.132,0l-204.8,204.8
+                                        c-6.662,6.664-6.662,17.468,0,24.132l204.8,204.8c6.78,6.548,17.584,6.36,24.132-0.42c6.387-6.614,6.387-17.099,0-23.712
+                                        L143.492,221.863z" />
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                        <span>PAYMENT</span>
+                    </h2>
+                    <div class="payment__coupon">
+                        <form id="coupon-form" class="payment__coupon-form" action="#" onsubmit="return false">
+                            <div class="payment__coupon-input-box">
+                                <input class="payment__coupon-input input req" type="text" name="Coupon" placeholder="Enter coupon">
+                                <button class="payment__coupon-info-btn disabled"></button>
+                                <button class="payment__coupon-input-clear"></button>
+                            </div>
+                            <button class="payment__coupon-sbmt" type="submit">Accept</button>
+                        </form>
+                        <div class="payment__coupon-info">
+                            <div class="payment__coupon-info-close"></div>
+                            <div class="payment__coupon-info-row">
+                                <h1 class="payment__coupon-info-title">Coupon information</h1>
+                            </div>
+                            <div class="payment__coupon-info-row payment__coupon-info-stat">
+                                <div class="payment__coupon-info-col payment__coupon-info-stat-item">
+                                    <span class="payment__coupon-info-value">50%</span>
+                                </div>
+                                <div class="payment__coupon-info-col payment__coupon-info-stat-item">
+                                    <span class="payment__coupon-info-time">1 time</span>
+                                </div>
+                                <div class="payment__coupon-info-col payment__coupon-info-stat-item">
+                                    <span class="payment__coupon-info-date">11.03.2020</span>
+                                </div>
+                            </div>
+                            <div class="payment__coupon-info-row">
+                                <p class="payment__coupon-info-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum molestiae illo neque? Assumenda provident qui voluptatem consectetur doloribus.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-item__body tabs__caption">
+                        <div class="step-item__choose-item item-choose active">
+                            <label class="item-choose__label item-choose__label_green franchise-var active">
+                                <input class="item-choose__input" name="franchise" type="radio"
+                                    form="steps-form" checked>
+                                <span class="check__box"></span>
+                                SUPER&nbsp;DEALER
+                            </label>
+                            <div class="item-choose__info">
+                                <div class="item-choose__info-name">3 Years</div>
+                                <div class="item-choose__info-percent">50%</div>
+                                <div class="item-choose__info-price">1500 EOS</div>
+                            </div>
+                        </div>
+                        <div class="step-item__choose-item item-choose">
+                            <label class="item-choose__label item-choose__label_aqua franchise-var">
+                                <input class="item-choose__input" name="franchise" type="radio"
+                                    form="steps-form">
+                                <span class="check__box"></span>
+                                DEALER
+                            </label>
+                            <div class="item-choose__info">
+                                <div class="item-choose__info-name">2 Years</div>
+                                <div class="item-choose__info-percent">45%</div>
+                                <div class="item-choose__info-price">1000 EOS</div>
+                            </div>
+                        </div>
+                        <div class="step-item__choose-item item-choose">
+                            <label class="item-choose__label item-choose__label_orange franchise-var">
+                                <input class="item-choose__input" name="franchise" type="radio"
+                                    form="steps-form">
+                                <span class="check__box"></span>
+                                SUB&nbsp;DEALER
+                            </label>
+                            <div class="item-choose__info">
+                                <div class="item-choose__info-name">1 Year</div>
+                                <div class="item-choose__info-percent">40%</div>
+                                <div class="item-choose__info-price">500 EOS</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container payment__container">
+                <div class="payment__warning">
+                    <div class="payment__warning-title">
+                        <img src="img/warning.png" alt="#">
+                        <span>PAY ATTENTION PLEASE</span>
+                    </div>
+                    <div class="payment__warning-text">
+                        <p>
+                            Your EOS account for the franchise will be created during the payment process. Please fill
+                            out the payment form carefully and correctly.
+                        </p>
+                        <p>
+                            <b>EOS&nbsp;address:</b> <span class="notranslate">popcornmaker</span>
+                            this is a smart contract account that creates new EOS wallets.
+                        </p>
+                        <p>
+                            <b>MEMO</b> is&nbsp;<span>your&nbsp;ID</span>, and the smart
+                            contract
+                            will distinguish you from other users and credit the funds to your account.
+                        </p>
+                    </div>
+                    <div class="payment__warning-text">
+                        <p class="red">
+                            Be sure to enter your MEMO on the payment page so your money doesn't dissolve in
+                            space!
+                        </p>
+                    </div>
+                    <div class="payment__warning-text">
+                        <p>
+                            Please remember that this is a blockchain and all transactions on the network are
+                            irreversible. And also that all operations are performed by a robot - a smart contract. If
+                            you do not specify the MEMO field and send funds to popcornmaker, the system will not be
+                            able to recognize your account and you will not be able to return the money.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CONTENT -->
+                <div class="payment__content">
+                    <div class="payment__content-column payment-item payment-item_crypto">
+                        <div class="payment-item__title">Deposit with any CRYPTO</div>
+                        <div class="payment-item__search">
+                            <form class="payment-item__search-form" action="#">
+                                <input class="input" type="text" placeholder="Search crypto...">
+                                <button class="payment-item__search-btn" type="submit"></button>
+                            </form>
+                        </div>
+
+
+                        <!-- SLIDER -->
+                        <div class="pay-item__content-slider pay-item__slider">
+
+                            <!-- 1 -->
+                            <div class="pay-item__slider-item slide">
+                                <a class="slide__item active" href="#">
+                                    <img src="img/03_working_24px/btc/btc.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">BTC</p>
+                                        <p class="text-item__desc">Bitcoin</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/eth/eth.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">ETH</p>
+                                        <p class="text-item__desc">Ethereum</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/usdt/usdt.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">USDT</p>
+                                        <p class="text-item__desc">Tether</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/usdterc20/usdterc20.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">usdterc20</p>
+                                        <p class="text-item__desc">Tether</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/usdterc20/usdterc20.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">usdttrc20</p>
+                                        <p class="text-item__desc">Tether</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/xrp/xrp.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">xrp</p>
+                                        <p class="text-item__desc">Ripple</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/bch/bch.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">bch</p>
+                                        <p class="text-item__desc">Bitcoin</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/ada/ada.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">ada</p>
+                                        <p class="text-item__desc">Cardano</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/bsv/bsv.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">bsv</p>
+                                        <p class="text-item__desc">Bitcoin</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- 2 -->
+                            <div class="pay-item__slider-item slide">
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/link/link.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">link</p>
+                                        <p class="text-item__desc">Chainlink</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/ltc/ltc.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">ltc</p>
+                                        <p class="text-item__desc">Litecoin</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/bnb/bnb.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">bnb</p>
+                                        <p class="text-item__desc">Binance</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/bnbmainnet/bnbmainnet.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">bnbmainnet</p>
+                                        <p class="text-item__desc">Binance</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/cro/cro.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">cro</p>
+                                        <p class="text-item__desc">Crypto.Com</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/xtz/xtz.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">xtz</p>
+                                        <p class="text-item__desc">Tezos</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/xlm/xlm.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">xlm</p>
+                                        <p class="text-item__desc">Stellar</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/xmr/xmr.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">xmr</p>
+                                        <p class="text-item__desc">Monero</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/trx/trx.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">trx</p>
+                                        <p class="text-item__desc">TRON</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- 3 -->
+                            <div class="pay-item__slider-item slide">
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/usdc/usdc.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">usdc</p>
+                                        <p class="text-item__desc">USD</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/vet/vet.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">vet</p>
+                                        <p class="text-item__desc">VeChain</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/ht/ht.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">ht</p>
+                                        <p class="text-item__desc">Huobi</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/neo/neo.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">neo</p>
+                                        <p class="text-item__desc">neo</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/atom/atom.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">atom</p>
+                                        <p class="text-item__desc">Cosmos</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/etc/etc.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">etc</p>
+                                        <p class="text-item__desc">Ethereum</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/dash/dash.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">dash</p>
+                                        <p class="text-item__desc">Dash</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/iota/iota.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">iota</p>
+                                        <p class="text-item__desc">Iota</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/zec/zec.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">zec</p>
+                                        <p class="text-item__desc">Zcash</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- 4 -->
+                            <div class="pay-item__slider-item slide">
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/ont/ont.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">ont</p>
+                                        <p class="text-item__desc">Ontology</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/xem/xem.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">xem</p>
+                                        <p class="text-item__desc">NEM</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/comp/comp.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">COMP</p>
+                                        <p class="text-item__desc">Compound</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/bat/bat.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">bat</p>
+                                        <p class="text-item__desc">Basic</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/doge/doge.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">doge</p>
+                                        <p class="text-item__desc">Dogecoin</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/lend/lend.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">lend</p>
+                                        <p class="text-item__desc">Aave</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/knc/knc.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">knc</p>
+                                        <p class="text-item__desc">Kyber</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/zrx/zrx.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">zrx</p>
+                                        <p class="text-item__desc">0x</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/dgb/dgb.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">dgb</p>
+                                        <p class="text-item__desc">DigiByt</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- 5 -->
+                            <div class="pay-item__slider-item slide">
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/pax/pax.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">pax</p>
+                                        <p class="text-item__desc">Paxos</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/qtum/qtum.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">qtum</p>
+                                        <p class="text-item__desc">QTUM</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/algo/algo.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">algo</p>
+                                        <p class="text-item__desc">Algorand</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/rep/rep.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">rep</p>
+                                        <p class="text-item__desc">Augur</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/omg/omg.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">omg</p>
+                                        <p class="text-item__desc">OmiseGo</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/icx/icx.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">icx</p>
+                                        <p class="text-item__desc">ICON</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/dai/dai.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">dai</p>
+                                        <p class="text-item__desc">Dai</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/zil/zil.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">zil</p>
+                                        <p class="text-item__desc">Zilliqa</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/hbar/hbar.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">hbar</p>
+                                        <p class="text-item__desc">Hedera</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- 6 -->
+                            <div class="pay-item__slider-item slide">
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/dcr/dcr.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">dcr</p>
+                                        <p class="text-item__desc">Decred</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/busd/busd.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">busd</p>
+                                        <p class="text-item__desc">Binance</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/btg/btg.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">btg</p>
+                                        <p class="text-item__desc">Bitcoin</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/bcd/bcd.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">bcd</p>
+                                        <p class="text-item__desc">Bitcoin</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/waves/waves.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">waves</p>
+                                        <p class="text-item__desc">Waves</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/enj/enj.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">enj</p>
+                                        <p class="text-item__desc">Enjin</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/lsk/lsk.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">lsk</p>
+                                        <p class="text-item__desc">Lisk</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/sc/sc.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">sc</p>
+                                        <p class="text-item__desc">Siacoin</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/tusd/tusd-1.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">tusd</p>
+                                        <p class="text-item__desc">TrueUSD</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- 7 -->
+                            <div class="pay-item__slider-item slide">
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/ren/ren.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">ren</p>
+                                        <p class="text-item__desc">Ren</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/nano/nano.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">nano</p>
+                                        <p class="text-item__desc">Nano</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/rvn/rvn.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">rvn</p>
+                                        <p class="text-item__desc">Ravencoin</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/lrc/lrc.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">lrc</p>
+                                        <p class="text-item__desc">Loopring</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/hot/hot.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">hot</p>
+                                        <p class="text-item__desc">Holo</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/husd/husd.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">husd</p>
+                                        <p class="text-item__desc">HUSD</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/nexo/nexo.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">nexo</p>
+                                        <p class="text-item__desc">Nexo</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/bnt/bnt.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">bnt</p>
+                                        <p class="text-item__desc">BancorNetworkToken</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/rlc/rlc.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">rlc</p>
+                                        <p class="text-item__desc">iExec</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- 8 -->
+                            <div class="pay-item__slider-item slide">
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/xvg/xvg.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">xvg</p>
+                                        <p class="text-item__desc">Verge</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/iost/iost.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">iost</p>
+                                        <p class="text-item__desc">Internet</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/snt/snt.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">snt</p>
+                                        <p class="text-item__desc">Status</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/btt/btt.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">btt</p>
+                                        <p class="text-item__desc">BitTorrent</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/matic/matic.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">matic</p>
+                                        <p class="text-item__desc">Matic</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/kmd/kmd.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">kmd</p>
+                                        <p class="text-item__desc">Komodo</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/steem/steem.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">steem</p>
+                                        <p class="text-item__desc">Steem</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/zen/zen.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">zen</p>
+                                        <p class="text-item__desc">Horizen</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/waxp/waxp.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">waxp</p>
+                                        <p class="text-item__desc">Wax</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- 9 -->
+                            <div class="pay-item__slider-item slide">
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/ardr/ardr.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">ardr</p>
+                                        <p class="text-item__desc">Ardor</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/mco/mco.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">mco</p>
+                                        <p class="text-item__desc">Crypto.Com</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/hc/hc.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">hc</p>
+                                        <p class="text-item__desc">HyperCash</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/mana/mana.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">mana</p>
+                                        <p class="text-item__desc">Decentraland</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/strat/strat.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">strat</p>
+                                        <p class="text-item__desc">Stratis</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/xzc/xzc.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">xzc</p>
+                                        <p class="text-item__desc">Zcoin</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/gnt/gnt.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">gnt</p>
+                                        <p class="text-item__desc">Golem</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/elf/elf.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">elf</p>
+                                        <p class="text-item__desc">aelf</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/npxs/npxs.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">npxs</p>
+                                        <p class="text-item__desc">Pundi</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- 10 -->
+                            <div class="pay-item__slider-item slide">
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/aion/aion.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">aion</p>
+                                        <p class="text-item__desc">Aion</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/ae/ae.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">ae</p>
+                                        <p class="text-item__desc">Aeternity</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/ark/ark.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">ark</p>
+                                        <p class="text-item__desc">Ark</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/fet/fet.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">fet</p>
+                                        <p class="text-item__desc">Fetch</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/powr/powr1.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">powr</p>
+                                        <p class="text-item__desc">Power</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/gt/gt.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">gt</p>
+                                        <p class="text-item__desc">Gatechain</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/storj/storj.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">storj</p>
+                                        <p class="text-item__desc">Storj</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/eur/eur.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">eur</p>
+                                        <p class="text-item__desc">Euro</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/utk/utk-1.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">utk</p>
+                                        <p class="text-item__desc">Utrust</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- 11 -->
+                            <div class="pay-item__slider-item slide">
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/rcn/rcn.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">rcn</p>
+                                        <p class="text-item__desc">Ripio</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/wtc/wtc.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">wtc</p>
+                                        <p class="text-item__desc">Waltonchain</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/pivx/pivx.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">pivx</p>
+                                        <p class="text-item__desc">PIVX</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/beam/beam.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">beam</p>
+                                        <p class="text-item__desc">BEAM</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/fun/fun.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">fun</p>
+                                        <p class="text-item__desc">FunFair</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/mtl/mtl.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">mtl</p>
+                                        <p class="text-item__desc">Metal</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/poly/poly.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">poly</p>
+                                        <p class="text-item__desc">Polymath</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/loom/loom.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">loom</p>
+                                        <p class="text-item__desc">Loom</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/sys/sys.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">sys</p>
+                                        <p class="text-item__desc">Syscoin</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- 12 -->
+                            <div class="pay-item__slider-item slide">
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/kan/kan.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">kan</p>
+                                        <p class="text-item__desc">BitKan</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/cvc/cvc.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">cvc</p>
+                                        <p class="text-item__desc">Civic</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/eng/eng.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">eng</p>
+                                        <p class="text-item__desc">Enigma</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/ppt/ppt.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">ppt</p>
+                                        <p class="text-item__desc">Populous</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/gas/gas.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">gas</p>
+                                        <p class="text-item__desc">Neo</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/celr/celr.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">celr</p>
+                                        <p class="text-item__desc">Celer</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/cnd/cnd-1.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">cnd</p>
+                                        <p class="text-item__desc">Cindicator</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/storm/storm.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">storm</p>
+                                        <p class="text-item__desc">Storm</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <!-- <img src="img/03_working_24px/st" alt="#"> -->
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">STMX</p>
+                                        <p class="text-item__desc">StormX</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- 13 -->
+                            <div class="pay-item__slider-item slide">
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/agi/agi.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">agi</p>
+                                        <p class="text-item__desc">SingularityNET</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/tnt/tnt.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">tnt</p>
+                                        <p class="text-item__desc">Tierion</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/bqx/bqx.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">bqx</p>
+                                        <p class="text-item__desc">Ethos</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/grs/grs.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">grs</p>
+                                        <p class="text-item__desc">Groestlcoin</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/blz/blz.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">blz</p>
+                                        <p class="text-item__desc">Bluzelle</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/rdn/rdn.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">rdn</p>
+                                        <p class="text-item__desc">Raiden</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/go/go.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">go</p>
+                                        <p class="text-item__desc">GoChain</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/brd/brd.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">brd</p>
+                                        <p class="text-item__desc">Bread</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/cmt/cmt.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">cmt</p>
+                                        <p class="text-item__desc">CyberMiles</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- 14 -->
+                            <div class="pay-item__slider-item slide">
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/ast/ast.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">ast</p>
+                                        <p class="text-item__desc">AirSwap</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/wabi/wabi-1.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">wabi</p>
+                                        <p class="text-item__desc">Tael</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/adx/adx.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">adx</p>
+                                        <p class="text-item__desc">AdEx</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/mda/mda.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">mda</p>
+                                        <p class="text-item__desc">Moeda</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/pay/pay.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">pay</p>
+                                        <p class="text-item__desc">TenXPay</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/dgd/dgd-1.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">dgd</p>
+                                        <p class="text-item__desc">DigixDAO</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/perl/perl.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">perl</p>
+                                        <p class="text-item__desc">Perlin</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/gto/gto.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">gto</p>
+                                        <p class="text-item__desc">Gifto</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/poe/poe.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">poe</p>
+                                        <p class="text-item__desc">Po.et</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- 15 -->
+                            <div class="pay-item__slider-item slide">
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/dock/dock.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">dock</p>
+                                        <p class="text-item__desc">Dock</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/sngls/sngls.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">sngls</p>
+                                        <p class="text-item__desc">SingularDTV</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/soc/soc.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">soc</p>
+                                        <p class="text-item__desc">All</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/evx/evx.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">evx</p>
+                                        <p class="text-item__desc">Everex</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/srn/srn.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">srn</p>
+                                        <p class="text-item__desc">SIRIN</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/xchf/xchf.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">xchf</p>
+                                        <p class="text-item__desc">CryptoFranc</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/dnt/dnt.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">dnt</p>
+                                        <p class="text-item__desc">district0x</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/mdt/mdt.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">mdt</p>
+                                        <p class="text-item__desc">Measurable</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/vibe/vibe.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">vibe</p>
+                                        <p class="text-item__desc">VIBE.et</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- 16 -->
+                            <div class="pay-item__slider-item slide">
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/snm/snm.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">snm</p>
+                                        <p class="text-item__desc">SONM</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/dlt/dlt.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">dlt</p>
+                                        <p class="text-item__desc">Agrello</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/vib/vib.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">vib</p>
+                                        <p class="text-item__desc">Viberate</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/lxt/lxt.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">lxt</p>
+                                        <p class="text-item__desc">Litex</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/lun/lun.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">lun</p>
+                                        <p class="text-item__desc">Lunyr</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/arn/arn.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">arn</p>
+                                        <p class="text-item__desc">Aeron</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/clo/clo.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">clo</p>
+                                        <p class="text-item__desc">Callisto</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/amb/amb.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">amb</p>
+                                        <p class="text-item__desc">Ambrosus</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/ong/ong.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">ong</p>
+                                        <p class="text-item__desc">Ontology</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- 17 -->
+                            <div class="pay-item__slider-item slide">
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/node/node.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">node</p>
+                                        <p class="text-item__desc">Whole</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/xaut/xaut.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">XAUT</p>
+                                        <p class="text-item__desc">Tether</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/usd/usd.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">usd</p>
+                                        <p class="text-item__desc">Dollar</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/gbp/gbp.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">gbp</p>
+                                        <p class="text-item__desc">British</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/cad/cad.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">cad</p>
+                                        <p class="text-item__desc">Canadian</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/jpy/jpy.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">jpy</p>
+                                        <p class="text-item__desc">Japanese</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/rub/rub.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">rub</p>
+                                        <p class="text-item__desc">Russian</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/aud/aud.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">aud</p>
+                                        <p class="text-item__desc">AUD</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/chf/chf.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">chf</p>
+                                        <p class="text-item__desc">Swiss</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- 18 -->
+                            <div class="pay-item__slider-item slide">
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/czk/czk.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">czk</p>
+                                        <p class="text-item__desc">Czech</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/dkk/dkk.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">dkk</p>
+                                        <p class="text-item__desc">Danish</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/nok/nok.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">nok</p>
+                                        <p class="text-item__desc">NOK</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/nzd/nzd.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">nzd</p>
+                                        <p class="text-item__desc">New</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/pln/pln.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">pln</p>
+                                        <p class="text-item__desc">Polish</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/sek/sek.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">sek</p>
+                                        <p class="text-item__desc">Swedish</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/try/try.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">try</p>
+                                        <p class="text-item__desc">Turkish</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/zar/zar.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">zar</p>
+                                        <p class="text-item__desc">South</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/huf/huf.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">huf</p>
+                                        <p class="text-item__desc">Hungarian</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- 19 -->
+                            <div class="pay-item__slider-item slide">
+                                <a class="slide__item" href="#">
+                                    <img src="img/03_working_24px/ils/ils.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">ils</p>
+                                        <p class="text-item__desc">Israeli</p>
+                                    </div>
+                                </a>
+                                <a class="slide__item slide__item_last" href="#">
+                                    <img src="img/03_working_24px/krw/krw.svg" alt="#">
+                                    <div class="slide__item-text text-item">
+                                        <p class="text-item__title">krw</p>
+                                        <p class="text-item__desc">South</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+
+
+                        <div class="pay-item__content-counter counter-pay">
+                            <div class="category-params-item-price disabled">
+                                <div class="category-params-item-price-table table">
+                                    <div class="category-params-item-price-value">
+                                        <div>
+                                            <img src="img/03_working_24px/eth/eth.svg" alt="btc">
+                                            <span class="min">
+                                                <span class="red">0</span>
+                                                <span>EOS</span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <img src="img/eos.svg" alt="btc">
+                                            <span class="max">
+                                                <span class="max__value green">1500</span>
+                                                <span>EOS</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="range-box">
+                                        <button class="rangeto-change rangeto-change_minus rangeto-change_red">-</button>
+                                        <input value="1500" type="text" id="rangeto2">
+                                        <div id="range2" class="category-params-item-price-range category-params-item-price-range_m"></div>
+                                        <button class="rangeto-change rangeto-change_plus rangeto-change_green">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="counter-pay__mail-info"
+                                href="mailto:9812738@gmail.com notranslate">9812738@gmail.com</a>
+                            <button class="counter-pay__btn-submit">renew invoice</button>
+                        </div>
+                        <div class="pay-item__content-invoice">
+                            <div class="pay-item__invoice invoice">
+                                <div class="invoice__title">
+                                    <span>invoice</span> <span class="invoice__title-key">547458969</span>
+                                    <img class="invoice-warning" src="img/invoice-warning-1.png" alt="#">
+                                </div>
+                                <div class="invoice-info">
+                                    <div class="invoice-info__item send">
+                                        <p class="invoice-info__item-top">
+                                            <span class="invoice-info__item-name">Send:</span>
+                                            <span
+                                                id="eth-value"
+                                                class="invoice-info__item-value send-value notranslate">0.00015
+                                                <span>ETH</span></span>
+                                            <button class="btn-clipboard copy-btn" data-clipboard-action="copy" data-clipboard-target="#eth-value"></button>
+                                        </p>
+                                        <p class="invoice-info__item-bottom">
+                                            <span class="invoice-info__item-name">to address:</span>
+                                            <span id="invoice-address" class="invoice-info__item-value address-value notranslate">
+                                                1BQ9qza7fn9snSCyJQB3r65
+                                            </span>
+                                            <button class="btn-clipboard copy-btn" data-clipboard-action="copy" data-clipboard-target="#invoice-address"></button>
+                                        </p>
+                                    </div>
+                                    <div class="invoice-info__item receive">
+                                        <p class="invoice-info__item-top">
+                                            <span class="invoice-info__item-name">Receive:</span>
+                                            <span class="invoice-info__item-value receive-value notranslate">100
+                                                <span>EOS</span></span>
+                                        </p>
+                                        <p class="invoice-info__item-bottom">
+                                            <span class="invoice-info__item-name">to address:</span>
+                                            <span class="invoice-info__item-value address-value notranslate">
+                                                popcornmaker
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="invoice-info__mail">
+                                    E-mail: <span>NO</span>
+                                </div>
+                                <div class="invoice__footer">
+                                    <div class="invoice__footer-title">
+                                        The expected rate <img class="invoice-warning"
+                                            src="img/invoice-warning-1.png" alt="#">
+                                    </div>
+                                    <div class="invoice__footer-warning">
+                                        This is an expected rate. ChangeNOW will pick the best rate for you
+                                        during the moment of the exchange.
+                                    </div>
+                                    <button class="invoice__copy-btn" type="submit">copy invoice<img src="img/copy-icon.png" alt="#"></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="payment-item__payeer"> -->
+                            <!-- <div class="payment-item__payeer-row">
+                                <a href="#"><img src="img/payeer.png" alt="Payeer"></a>
+                            </div>
+                            <div class="payment-item__payeer-row">
+                                <div class="payment-item__payeer-column">
+                                    <a href="#"><img src="img/Visa_Inc._logo.svg" alt="Visa"></a>
+                                </div>
+                                <div class="payment-item__payeer-column">
+                                    <a href="#"><img src="img/mastercard-logo.svg" alt="mastercard"></a>
+                                </div>
+                            </div>
+                            <div class="payment-item__payeer-row">
+                                <a href="#"><img src="img/crypto-icons.png" alt="Crypto"></a>
+                            </div> -->
+
+                            
+                            
+                        <!-- </div> -->
+                        <!-- <div class="payment-item__howtopay">
+                            <h3 class="payment-item__howtopay-title">
+                                How to pay
+                            </h3>
+                            <div class="payment-item__howtopay-content">
+                                <p>
+                                    There are restrictions when paying with a credit card. In this regard, payment can be made in several stages. After the first deposit, your EOS account will be created, activated and replenished. Next, you will be able to log in to the partner's personal account with the keys that you saved and there replenish your EOS account up to the necessary amount to activate the license.
+                                </p>
+                                <p>
+                                    Payment by cryptocurrency or from the Payeer wallet passes without restrictions.
+                                </p>
+                                <div class="payment-item__video-box video video_enabled">
+                                    <a class="video__link" href="https://youtu.be/FJZtLvHtC5E">
+                                        <img class="video__media" src="img/video-img.png" alt="#">
+                                    </a>
+                                    <button class="video__button" aria-label="Play">
+                                        <svg width="68" height="48" viewBox="0 0 68 48">
+                                            <path class="video__button-shape"
+                                                d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z">
+                                            </path>
+                                            <path class="video__button-icon" d="M 45,24 27,14 27,34"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <p>
+                                    Pay this invoice with credit card, cryptocurrencies or from the balance of your Payeer wallet.
+                                </p>
+                                <a class="payment-item__howtopay-link" href="#">Pay this invoice</a>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="payment__content-column payment-item  payment-item_method">
+                        <div class="payment-item__title">Deposit with methods below</div>
+                        <div class="payment-item__info-keys">
+
+                            <div class="category-params-item-price disabled">
+                                <div class="category-params-item-price-table table">
+                                    <div class="cell">
+                                        <button class="rangeto-change rangeto-change_minus">-</button>
+                                        <input value="1500" type="text" id="rangeto">
+                                        <button class="rangeto-change rangeto-change_plus">+</button>
+                                    </div>
+                                </div>
+                                <div id="range" class="category-params-item-price-range"></div>
+                                <span class="min">
+                                    <span class="min__value">o</span>    
+                                    EOS
+                                </span>
+                                <span class="max">
+                                    <span class="max__value">1500</span>
+                                    EOS
+                                </span>
+                            </div>
+
+                        </div>
+                        <div class="payment-item__methods">
+                            <div class="payment-item__methods-item payment-item__methods-item_h active">
+                                <img src="img/visa-c.svg" alt="">
+                                <img src="img/mastercard.svg" alt="">
+                            </div>
+                            <div class="payment-item__methods-item payment-item__methods-item_h">
+                                <img src="img/neteller.svg" alt="">
+                            </div>
+                            <div class="payment-item__methods-item">
+                                <img src="img/03_working_24px/btc/btc-n.svg" alt="">
+                            </div>
+                            <div class="payment-item__methods-item">
+                                <img src="img/03_working_24px/bch/bch-n.svg" alt="">
+                            </div>
+                            <div class="payment-item__methods-item">
+                                <img src="img/03_working_24px/dash/dash-n.svg" alt="">
+                            </div>
+                            <div class="payment-item__methods-item">
+                                <img src="img/03_working_24px/eth/eth.svg" alt="">
+                            </div>
+                            <div class="payment-item__methods-item">
+                                <img src="img/chainlink.png" alt="">
+                            </div>
+                            <div class="payment-item__methods-item">
+                                <img src="img/Litecoin-Logo.png" alt="">
+                            </div>
+                            <div class="payment-item__methods-item">
+                                <img src="img/tether-logo-png-transparent.png" alt="">
+                            </div>
+                            <div class="payment-item__methods-item">
+                                <img src="img/xlm.png" alt="">
+                            </div>
+                            <div class="payment-item__methods-item">
+                                <img src="img/03_working_24px/xrp/xrp.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="payment-item__method-text">
+                            <p>
+                                <span class="num num_blue">1</span>
+                                Very fast and convenient KYC procedure, if you pay with credit card, only send your passport screen,  turn around your face into your smartphone camera and that’s it, robot will recognise you.
+                            </p>
+                            <p>
+                                <span class="num num_yellow">2</span>
+                                In first payment with the credit card 
+                                you will have to validate it.
+                                <span class="red">After payment please check your email,  where you will find a link for validation your credit card</span>
+                            </p>
+                            <p>
+                                <span class="num num_green">3</span>
+                                Payment takes about few minutes, no KYC if you pay with any crypto.
+                            </p>
+                        </div>
+                        <div class="payment-item__tovideo">
+                            How to deposit with credit card,
+                            <span>please&nbsp;watch&nbsp;the&nbsp;video</span>
+                        </div>
+                        <div class="payment-item__video">
+                            <!-- <p>
+                                If you don`t have EOS, you can copy the invoice and send it to a friend who has EOS. <br>
+                                Or you can buy EOS at a variety of exchange offices.
+                            </p>
+                            <p>
+                                How to do this, watch the video.
+                            </p> -->
+                            <div class="payment-item__video-box video video_enabled">
+                                <a class="video__link" href="https://youtu.be/FJZtLvHtC5E">
+                                    <img class="video__media" src="img/video-img.png" alt="#">
+                                </a>
+                                <button class="video__button" aria-label="Play">
+                                    <svg width="68" height="48" viewBox="0 0 68 48">
+                                        <path class="video__button-shape"
+                                            d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z">
+                                        </path>
+                                        <path class="video__button-icon" d="M 45,24 27,14 27,34"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="payment-item__provider">
+                            <div class="payment-item__provider-title">
+                                <span>service provided</span>
+                                <span>by our partner</span>
+                            </div>
+                            <!-- <p class="payment-item__provider-text">Information provided by our partner</p> -->
+                            <a class="payment-item__provider-img" href="#"><img src="img/switcher.png" alt="Switcher"></a>
+                            <a class="payment-item__provider-link" href="https://switchere.com/">buy EOS in few minutes</a>
+                        </div>
+                    </div>
+                    <div class="payment__content-column payment-item payment-item_eos">
+                        <div class="payment-item__title">Deposit with eos</div>
+
+                        <div class="category-params-item-price category-params-item-price_eos disabled">
+                            <div class="category-params-item-price-table table">
+                                <!-- <div class="cell">
+                                    <input type="text" name="form[]" id="rangefrom">
+                                </div> -->
+                                <div class="cell">
+                                    <button class="rangeto-change rangeto-change_minus">-</button>
+                                    <input value="1500" type="text" id="rangeto3">
+                                    <button class="rangeto-change rangeto-change_plus">+</button>
+                                </div>
+                            </div>
+                            <div id="range3" class="category-params-item-price-range"></div>
+                            <span class="min">
+                                <span class="min__value">o</span>    
+                                EOS
+                            </span>
+                            <span class="max">
+                                <span class="max__value">1500</span>
+                                EOS
+                            </span>
+                        </div>
+                        <div class="payment-item__info-keys payment-item__info-keys_eos">
+                            <div class="payment-item__info-keys-row payment__keys-info">
+                                <span>Adress:</span><span class="red"> *</span>
+                                <span id="key6" class="payment__keys-info-value notranslate" data-value="popcornmaker">johnnesmelov</span>
+                                <button class="copy-btn btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#key6"></button>
+                            </div>
+                            <div class="payment-item__info-keys-row payment__keys-info">
+                                <span class="notranslate">Memo:</span><span class="red"> *</span>
+                                <span id="key7" class="payment__keys-info-value notranslate" data-value="popcornmaker">-</span>
+                                <button class="copy-btn btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#key7"></button>
+                            </div>
+                            <div class="payment-item__info-keys-row payment__keys-info">
+                                <span>Amount:</span>
+                                <span id="amount" class="payment__keys-info-value franchise-value notranslate">1500 EOS</span>
+                            </div>
+                            
+                            <p class="visually-hidden private-key">
+                                Send: <span id="private-key__send-amount" class="notranslate franchise-value">1500 EOS</span><br>
+                                to address: <span class="notranslate">johnnesmelov</span><br>
+                                MEMO: <span class="notranslate">-</span><br>
+                            </p>
+                        </div>
+                        <div class="payment-item__tip payment-item__tip_bg">
+                            <div class="payment-item__tip-title">TIP 1</div>
+                            <div class="payment-item__tip-text">
+                                If you do not have EOS, then you can copy the invoice and send it to a friend who has it, he will send you EOS, and you will pay him money.
+                            </div>
+                        </div>
+                        <div class="payment-item__tip">
+                            <div class="payment-item__tip-title">TIP 1</div>
+                            <div class="payment-item__tip-text">
+                                Also you can buy EOS in exchangers, just pay the invoice from there by any convenient payment method, fill EOS name and MEMO like above, and you will get EOS to your wallet.
+                            </div>
+                        </div>
+                        <div class="payment-item__info-keys-copybox">
+                            <button class="payment-item__info-keys-copy btn-clipboard" data-clipboard-action="copy" data-clipboard-target=".private-key">COPY INVOICE <img src="img/copy-icon.png" alt="#"></button>
+                        </div>
+                        <div class="payment-item__footer-title">WHAT IS MEMO?</div>
+                        <div class="payment-item__footer">
+                            For transactions to private EOS wallets MEMO does not required. Some exchanges can ask you to fill the MEMO field, in this case text there what ever you want, for example “-“.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer-payment">
+            <img src="img/logo.svg" alt="Logo">
+            <span class="footer-payment__copyright">2020 © <a class="notranslate" href="#">16Bit</a></span>
+        </footer>
+
+    </div>
+
+
+
+    <!-- jQuery -->
+    <script src="libs/jquery-3.4.1.min.js"></script>
+    <!-- jQuery UI -->
+    <script src="libs/jquery-ui.min.js"></script>
+    <script src="libs/jquery.ui.touch-punch.min.js"></script>
+    <!-- Slick -->
+    <script src="libs/slick.min.js"></script>
+    <!-- Clipboard -->
+    <script src="libs/clipboard.min.js"></script>
+    <!-- SCRIPTS -->
+    <script src="js/script.js"></script>
+
+    <script>
+        function googleTranslateElementInit2() { new google.translate.TranslateElement({ pageLanguage: 'en', autoDisplay: false }, 'google_translate_element2'); }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
+
+    <script>
+        // /* <![CDATA[ */
+        eval(function (p, a, c, k, e, r) { e = function (c) { return (c < a ? '' : e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(36)) }; if (!''.replace(/^/, String)) { while (c--) r[e(c)] = k[c] || e(c); k = [function (e) { return r[e] }]; e = function () { return '\\w+' }; c = 1 }; while (c--) if (k[c]) p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]); return p }('6 7(a,b){n{4(2.9){3 c=2.9("o");c.p(b,f,f);a.q(c)}g{3 c=2.r();a.s(\'t\'+b,c)}}u(e){}}6 h(a){4(a.8)a=a.8;4(a==\'\')v;3 b=a.w(\'|\')[1];3 c;3 d=2.x(\'y\');z(3 i=0;i<d.5;i++)4(d[i].A==\'B-C-D\')c=d[i];4(2.j(\'k\')==E||2.j(\'k\').l.5==0||c.5==0||c.l.5==0){F(6(){h(a)},G)}g{c.8=b;7(c,\'m\');7(c,\'m\')}}', 43, 43, '||document|var|if|length|function|GTranslateFireEvent|value|createEvent||||||true|else|doGTranslate||getElementById|google_translate_element2|innerHTML|change|try|HTMLEvents|initEvent|dispatchEvent|createEventObject|fireEvent|on|catch|return|split|getElementsByTagName|select|for|className|goog|te|combo|null|setTimeout|500'.split('|'), 0, {}))
+    // /* ]]> */
+    </script>
+</body>
+
+</html>

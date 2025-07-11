@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16BIT.payment</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.min.css">
+    <script>
+        function showPrefferedOptions(oSelect) {
+            var aOptionsValues = [];
+            var aOptions = getSelectedIndexes(oSelect);
+            for (var i = 0; i < aOptions.length; i++) {
+                aOptionsValues.push(aOptions[i].substring(3));
+            }
+            document.querySelector('.header__translate-flag').src = 'img/flags/' + aOptionsValues + '.png';
+        }
+        function getSelectedIndexes(oSelect) {
+            var aSelected = [];
+            for (var i = 0; i < oSelect.options.length; i++) {
+                if (oSelect.options[i].selected) {
+                    aSelected.push(oSelect.options[i].getAttribute('value'));
+                }
+            }
+            
+            return aSelected;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <!-- COMMUNICATION BUTTON -->
+        <div class="comm-btn">
+            <div class="dws">
+                <div class="pulse">
+                    <div class="bloc"></div>
+                    <div class="phone"><img src="img/chat.svg" alt="Message"></div>
+                    <div class="text notranslate">SUPPORT <br> 24/7</div>
+                </div>
+            </div>
+            <p class="comm-btn__text notranslate">CHAT ME</p>
+        </div>
+
+        <!-- POPUP FORWARD LOGIN  -->
+        <div class="popup popup-login">
+            <div class="popup-table table">
+                <div class="cell">
+                    <div class="popup__content popup-login__content">
+                        <div class="popup-close"></div>
+                        <div class="popup__title popup-login__title">
+                            LOGIN
+                        </div>
+                        <div class="popup-login__body body-login">
+                            <div class="body-login__first-info">
+                                <h3 class="body-login__first-info-title">PARTNERS BACKOFFICE</h3>
+                                <p class="body-login__first-info-text">
+                                    Now you will be redirected to the <a class="notranslate" href="#">backoffice.16bit.partners</a> where you can to login with the EOS private key or&nbsp;SCATTER.
+                                </p>
+                            </div>
+                            <!-- <div class="body-login__second-info"> -->
+                                <!-- <p class="body-login__second-info-text">
+                                    Please copy key before you will continue.
+                                </p> -->
+                                <!-- <div class="body-login__key">
+                                    Key: <span id="key4">e6eyj56en6wsjwss2w56jwssjrjfge567e5rjfge567e5</span> -->
+                                    <!-- <img
+                                        src="img/copy-icon.png" alt="Copy" class="btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#key3"> -->
+                                        <!-- <button class="copy-btn btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#key4"></button>
+                                </div> -->
+                            <!-- </div> -->
+                        </div>
+                        <div class="popup-login__buttons">
+                            <button class="popup-login__btn-cancel">CANCEL</button>
+                            <a href="autentification.html" class="popup-login__btn-continue">continue</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- POPUP PAYMENT -->
+        <div class="popup popup-payment">
+            <div class="popup-table table">
+                <div class="cell">
+                    <div class="popup__content popup-login__content">
+                        <div class="popup-close"></div>
+                        <div class="popup__title">
+                            PAYMENT
+                        </div>
+                        <div class="popup-login__body body-login">
+                            <div class="body-login__first">
+                                <div class="body-login__first-info">
+                                    <h3 class="body-login__first-info-title">Enter your private key</h3>
+                                    <ol>
+                                        <li>Paste your private key</li>
+                                        <li>Press LOGIN</li>
+                                    </ol>
+                                </div>
+                                <form action="#" class="body-login__first-form form-login">
+                                    <div class="form-login__input-box">
+                                        <input autocomplete="off" type="text" name="form[]" placeholder="Input value"
+                                            class="input form-login__input req clipboard-results">
+                                        <img class="form-login__input-refresh" src="img/login-refresh.svg"
+                                            alt="refresh">
+                                        <img class="form-login__input-warning" src="img/invoice-warning-1.png" alt="#">
+                                    </div>
+                                    <div class="form-login__buttons buttons-login">
+                                        <button class="button-login button-login_paste" type="button">paste</button>
+                                        <button class="button-login button-login_login" type="submit">login</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="body-login__or">
+                                <span>or</span>
+                            </div>
+                            <div class="body-login__second">
+                                <a href="#" class="body-login__second-link">
+                                    login with <span></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HEADER -->
+        <header class="header">
+            <div class="container header__container">
+                <div class="header__logo">
+                    <a href="#" title="16Bit.game"><img src="img/logo.svg" alt="Logo"><span class="notranslate">franchising</span></a>
+                </div>
+                
+                <div class="header__translate">
+                    <div class="header__translate-flag-box">
+                        <img src="img/flags/en.png" alt="africaans" class="header__translate-flag">
+                    </div>
+                    <select class="header__translate-select" id="select-lang" onchange="showPrefferedOptions(this);doGTranslate(this);">
+                        <!-- <option value="">Select Language</option> -->
+                        <option value="en|af">Afrikaans</option>
+                        <option value="en|sq">Albanian</option>
+                        <option value="en|ar">Arabic</option>
+                        <option value="en|hy">Armenian</option>
+                        <option value="en|az">Azerbaijani</option>
+                        <option value="en|eu">Basque</option>
+                        <option value="en|be">Belarusian</option>
+                        <option value="en|bg">Bulgarian</option>
+                        <option value="en|ca">Catalan</option>
+                        <option value="en|zh-CN">Chinese (Simplified)</option>
+                        <option value="en|zh-TW">Chinese (Traditional)</option>
+                        <option value="en|hr">Croatian</option>
+                        <option value="en|cs">Czech</option>
+                        <option value="en|da">Danish</option>
+                        <option value="en|nl">Dutch</option>
+                        <option value="en|en" selected>English</option>
+                        <option value="en|et">Estonian</option>
+                        <option value="en|tl">Filipino</option>
+                        <option value="en|fi">Finnish</option>
+                        <option value="en|fr">French</option>
+                        <option value="en|gl">Galician</option>
+                        <option value="en|ka">Georgian</option>
+                        <option value="en|de">German</option>
+                        <option value="en|el">Greek</option>
+                        <option value="en|ht">Haitian Creole</option>
+                        <option value="en|iw">Hebrew</option>
+                        <option value="en|hi">Hindi</option>
+                        <option value="en|hu">Hungarian</option>
+                        <option value="en|is">Icelandic</option>
+                        <option value="en|id">Indonesian</option>
+                        <option value="en|ga">Irish</option>
+                        <option value="en|it">Italian</option>
+                        <option value="en|ja">Japanese</option>
+                        <option value="en|ko">Korean</option>
+                        <option value="en|lv">Latvian</option>
+                        <option value="en|lt">Lithuanian</option>
+                        <option value="en|mk">Macedonian</option>
+                        <option value="en|ms">Malay</option>
+                        <option value="en|mt">Maltese</option>
+                        <option value="en|no">Norwegian</option>
+                        <option value="en|fa">Persian</option>
+                        <option value="en|pl">Polish</option>
+                        <option value="en|pt">Portuguese</option>
+                        <option value="en|ro">Romanian</option>
+                        <option value="en|ru">Russian</option>
+                        <option value="en|sr">Serbian</option>
+                        <option value="en|sk">Slovak</option>
+                        <option value="en|sl">Slovenian</option>
+                        <option value="en|es">Spanish</option>
+                        <option value="en|sw">Swahili</option>
+                        <option value="en|sv">Swedish</option>
+                        <option value="en|th">Thai</option>
+                        <option value="en|tr">Turkish</option>
+                        <option value="en|uk">Ukrainian</option>
+                        <option value="en|ur">Urdu</option>
+                        <option value="en|vi">Vietnamese</option>
+                        <option value="en|cy">Welsh</option>
+                        <option value="en|yi">Yiddish</option>
+                    </select>
+                    <div id="google_translate_element2"></div>
+                </div>
+                <a href="#payment" class="header__btn pl">
+                    <span>
+                        <svg id="Layer_1" enable-background="new 0 0 512 512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <path d="m512 163v-27c0-30.928-25.072-56-56-56h-400c-30.928 0-56 25.072-56 56v27c0 2.761 2.239 5 5 5h502c2.761 0 5-2.239 5-5z"/>
+                                <path d="m0 205v171c0 30.928 25.072 56 56 56h400c30.928 0 56-25.072 56-56v-171c0-2.761-2.239-5-5-5h-502c-2.761 0-5 2.239-5 5zm128 131c0 8.836-7.164 16-16 16h-16c-8.836 0-16-7.164-16-16v-16c0-8.836 7.164-16 16-16h16c8.836 0 16 7.164 16 16z"/>
+                            </g>
+                        </svg>
+                    </span>
+                    Payment
+                </a>
+                <a href="#login" class="header__btn pl">
+                    <span>
+                        <svg id="Слой_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 467.93 469">
+                            <title>logout</title>
+                            <path class="cls-1"
+                                d="M468.27,234.5c0,129.51-105,234.5-234.5,234.5C111.45,469,11.12,375.33.33,255.82h190.8v64a21.31,21.31,0,0,0,36.39,15.07l85.28-85.27a21.3,21.3,0,0,0,0-30.14l-85.28-85.28a21.31,21.31,0,0,0-36.39,15.07v64H.33C11.12,93.67,111.45,0,233.77,0,363.28,0,468.27,105,468.27,234.5Z"
+                                transform="translate(-0.33 0)" />
+                        </svg>
+                    </span>
+                    Login
+                </a>
+            </div>
+        </header>
+
+        <section class="payment payment_shop tabs">
+            <div class="payment__container-white">
+                <div class="payment__container">
+                    <h2 class="title payment__title">
+                        <a class="btn-back" href="#" onclick="javascript:history.back(); return false;">
+                            back to franchises
+                            <?xml version="1.0" encoding="iso-8859-1"?>
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 443.52 443.52"
+                                style="enable-background:new 0 0 443.52 443.52;" xml:space="preserve">
+                                <g>
+                                    <g>
+                                        <path d="M143.492,221.863L336.226,29.129c6.663-6.664,6.663-17.468,0-24.132c-6.665-6.662-17.468-6.662-24.132,0l-204.8,204.8
+                                        c-6.662,6.664-6.662,17.468,0,24.132l204.8,204.8c6.78,6.548,17.584,6.36,24.132-0.42c6.387-6.614,6.387-17.099,0-23.712
+                                        L143.492,221.863z" />
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                        <span>PAYMENT</span>
+                    </h2>
+                    <div class="payment__coupon">
+                        <form id="coupon-form" class="payment__coupon-form" action="#" onsubmit="return false">
+                            <div class="payment__coupon-input-box">
+                                <input class="payment__coupon-input input req" type="text" name="Coupon" placeholder="Enter coupon">
+                                <button class="payment__coupon-info-btn disabled"></button>
+                                <button class="payment__coupon-input-clear"></button>
+                            </div>
+                            <button class="payment__coupon-sbmt" type="submit">Accept</button>
+                        </form>
+                        <div class="payment__coupon-info">
+                            <div class="payment__coupon-info-close"></div>
+                            <div class="payment__coupon-info-row">
+                                <h1 class="payment__coupon-info-title">Coupon information</h1>
+                            </div>
+                            <div class="payment__coupon-info-row payment__coupon-info-stat">
+                                <div class="payment__coupon-info-col payment__coupon-info-stat-item">
+                                    <span class="payment__coupon-info-value">50%</span>
+                                </div>
+                                <div class="payment__coupon-info-col payment__coupon-info-stat-item">
+                                    <span class="payment__coupon-info-time">1 time</span>
+                                </div>
+                                <div class="payment__coupon-info-col payment__coupon-info-stat-item">
+                                    <span class="payment__coupon-info-date">11.03.2020</span>
+                                </div>
+                            </div>
+                            <div class="payment__coupon-info-row">
+                                <p class="payment__coupon-info-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum molestiae illo neque? Assumenda provident qui voluptatem consectetur doloribus.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-item__body tabs__caption">
+                        <div class="step-item__choose-item item-choose active">
+                            <label class="item-choose__label item-choose__label_green franchise-var active">
+                                <input class="item-choose__input" name="franchise" type="radio"
+                                    form="steps-form" checked>
+                                <span class="check__box"></span>
+                                SUPER&nbsp;DEALER
+                            </label>
+                            <div class="item-choose__info">
+                                <div class="item-choose__info-name">3 Years</div>
+                                <div class="item-choose__info-percent">50%</div>
+                                <div class="item-choose__info-price">1500 EOS</div>
+                            </div>
+                        </div>
+                        <div class="step-item__choose-item item-choose">
+                            <label class="item-choose__label item-choose__label_aqua franchise-var">
+                                <input class="item-choose__input" name="franchise" type="radio"
+                                    form="steps-form">
+                                <span class="check__box"></span>
+                                DEALER
+                            </label>
+                            <div class="item-choose__info">
+                                <div class="item-choose__info-name">2 Years</div>
+                                <div class="item-choose__info-percent">45%</div>
+                                <div class="item-choose__info-price">1000 EOS</div>
+                            </div>
+                        </div>
+                        <div class="step-item__choose-item item-choose">
+                            <label class="item-choose__label item-choose__label_orange franchise-var">
+                                <input class="item-choose__input" name="franchise" type="radio"
+                                    form="steps-form">
+                                <span class="check__box"></span>
+                                SUB&nbsp;DEALER
+                            </label>
+                            <div class="item-choose__info">
+                                <div class="item-choose__info-name">1 Year</div>
+                                <div class="item-choose__info-percent">40%</div>
+                                <div class="item-choose__info-price">500 EOS</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container payment__container">
+                <div class="payment__warning">
+                    <div class="payment__warning-title">
+                        <img src="img/warning.png" alt="#">
+                        <span>PAY ATTENTION PLEASE</span>
+                    </div>
+                    <div class="payment__warning-text">
+                        <p>
+                            Your EOS account for the franchise will be created during the payment process. Please fill
+                            out the payment form carefully and correctly.
+                        </p>
+                        <p>
+                            <b>EOS&nbsp;address:</b> <span class="notranslate">popcornmaker</span>
+                            this is a smart contract account that creates new EOS wallets.
+                        </p>
+                        <p>
+                            <b>MEMO</b> is&nbsp;<span>your&nbsp;ID</span>, and the smart
+                            contract
+                            will distinguish you from other users and credit the funds to your account.
+                        </p>
+                    </div>
+                    <div class="payment__warning-text">
+                        <p class="red">
+                            Be sure to enter your MEMO on the payment page so your money doesn't dissolve in
+                            space!
+                        </p>
+                    </div>
+                    <div class="payment__warning-text">
+                        <p>
+                            Please remember that this is a blockchain and all transactions on the network are
+                            irreversible. And also that all operations are performed by a robot - a smart contract. If
+                            you do not specify the MEMO field and send funds to popcornmaker, the system will not be
+                            able to recognize your account and you will not be able to return the money.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CONTENT -->
+                <div class="payment__content payment__content_st">
+                    
+                    <div class="payment__content-column payment-item  payment-item_eos">
+                        <div class="payment-item__title">Deposit with eos</div>
+
+                        <div class="category-params-item-price category-params-item-price_eos disabled">
+                            <div class="category-params-item-price-table table">
+                                <!-- <div class="cell">
+                                    <input type="text" name="form[]" id="rangefrom">
+                                </div> -->
+                                <div class="cell">
+                                    <button class="rangeto-change rangeto-change_minus">-</button>
+                                    <input value="1500" type="text" id="rangeto3">
+                                    <button class="rangeto-change rangeto-change_plus">+</button>
+                                </div>
+                            </div>
+                            <div id="range3" class="category-params-item-price-range"></div>
+                            <span class="min">
+                                <span class="min__value">o</span>    
+                                EOS
+                            </span>
+                            <span class="max">
+                                <span class="max__value">1500</span>
+                                EOS
+                            </span>
+                        </div>
+                        <div class="payment-item__info-keys payment-item__info-keys_eos">
+                            <div class="payment-item__info-keys-row payment__keys-info">
+                                <span>Adress:</span><span class="red"> *</span>
+                                <span id="key6" class="payment__keys-info-value notranslate" data-value="popcornmaker">johnnesmelov</span>
+                                <button class="copy-btn btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#key6"></button>
+                            </div>
+                            <div class="payment-item__info-keys-row payment__keys-info">
+                                <span class="notranslate">Memo:</span><span class="red"> *</span>
+                                <span id="key7" class="payment__keys-info-value notranslate" data-value="popcornmaker">-</span>
+                                <button class="copy-btn btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#key7"></button>
+                            </div>
+                            <div class="payment-item__info-keys-row payment__keys-info">
+                                <span>Amount:</span>
+                                <span id="amount" class="payment__keys-info-value franchise-value notranslate">1500 EOS</span>
+                            </div>
+                            
+                            <p class="visually-hidden private-key">
+                                Send: <span id="private-key__send-amount" class="notranslate franchise-value">1500 EOS</span><br>
+                                to address: <span class="notranslate">johnnesmelov</span><br>
+                                MEMO: <span class="notranslate">-</span><br>
+                            </p>
+                        </div>
+                        <div class="payment-item__tip payment-item__tip_bg">
+                            <div class="payment-item__tip-title">TIP 1</div>
+                            <div class="payment-item__tip-text">
+                                If you do not have EOS, then you can copy the invoice and send it to a friend who has it, he will send you EOS, and you will pay him money.
+                            </div>
+                        </div>
+                        <div class="payment-item__tip">
+                            <div class="payment-item__tip-title">TIP 1</div>
+                            <div class="payment-item__tip-text">
+                                Also you can buy EOS in exchangers, just pay the invoice from there by any convenient payment method, fill EOS name and MEMO like above, and you will get EOS to your wallet.
+                            </div>
+                        </div>
+                        <div class="payment-item__info-keys-copybox">
+                            <button class="payment-item__info-keys-copy btn-clipboard" data-clipboard-action="copy" data-clipboard-target=".private-key">COPY INVOICE <img src="img/copy-icon.png" alt="#"></button>
+                        </div>
+                        <div class="payment-item__footer-title">WHAT IS MEMO?</div>
+                        <div class="payment-item__footer">
+                            For transactions to private EOS wallets MEMO does not required. Some exchanges can ask you to fill the MEMO field, in this case text there what ever you want, for example “-“.
+                        </div>
+                    </div>
+                    <div class="payment__content-column payment-item  payment-item_method">
+                        <div class="payment-item__title">Deposit with methods below</div>
+                        <div class="payment-item__info-keys">
+
+                            <div class="category-params-item-price disabled">
+                                <div class="category-params-item-price-table table">
+                                    <div class="cell">
+                                        <button class="rangeto-change rangeto-change_minus">-</button>
+                                        <input value="1500" type="text" id="rangeto">
+                                        <button class="rangeto-change rangeto-change_plus">+</button>
+                                    </div>
+                                </div>
+                                <div id="range" class="category-params-item-price-range"></div>
+                                <span class="min">
+                                    <span class="min__value">o</span>    
+                                    EOS
+                                </span>
+                                <span class="max">
+                                    <span class="max__value">1500</span>
+                                    EOS
+                                </span>
+                            </div>
+
+                        </div>
+                        <div class="payment-item__methods">
+                            <div class="payment-item__methods-item payment-item__methods-item_h active">
+                                <img src="img/visa-c.svg" alt="">
+                                <img src="img/mastercard.svg" alt="">
+                            </div>
+                            <div class="payment-item__methods-item payment-item__methods-item_h">
+                                <img src="img/neteller.svg" alt="">
+                            </div>
+                            <div class="payment-item__methods-item">
+                                <img src="img/03_working_24px/btc/btc-n.svg" alt="">
+                            </div>
+                            <div class="payment-item__methods-item">
+                                <img src="img/03_working_24px/bch/bch-n.svg" alt="">
+                            </div>
+                            <div class="payment-item__methods-item">
+                                <img src="img/03_working_24px/dash/dash-n.svg" alt="">
+                            </div>
+                            <div class="payment-item__methods-item">
+                                <img src="img/03_working_24px/eth/eth.svg" alt="">
+                            </div>
+                            <div class="payment-item__methods-item">
+                                <img src="img/chainlink.png" alt="">
+                            </div>
+                            <div class="payment-item__methods-item">
+                                <img src="img/Litecoin-Logo.png" alt="">
+                            </div>
+                            <div class="payment-item__methods-item">
+                                <img src="img/tether-logo-png-transparent.png" alt="">
+                            </div>
+                            <div class="payment-item__methods-item">
+                                <img src="img/xlm.png" alt="">
+                            </div>
+                            <div class="payment-item__methods-item">
+                                <img src="img/03_working_24px/xrp/xrp.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="payment-item__method-text">
+                            <p>
+                                <span class="num num_blue">1</span>
+                                Very fast and convenient KYC procedure, if you pay with credit card, only send your passport screen,  turn around your face into your smartphone camera and that’s it, robot will recognise you.
+                            </p>
+                            <p>
+                                <span class="num num_yellow">2</span>
+                                In first payment with the credit card 
+                                you will have to validate it.
+                                <span class="red">After payment please check your email,  where you will find a link for validation your credit card</span>
+                            </p>
+                            <p>
+                                <span class="num num_green">3</span>
+                                Payment takes about few minutes, no KYC if you pay with any crypto.
+                            </p>
+                        </div>
+                        <div class="payment-item__tovideo">
+                            How to deposit with credit card,
+                            <span>please&nbsp;watch&nbsp;the&nbsp;video</span>
+                        </div>
+                        <div class="payment-item__video">
+                            <!-- <p>
+                                If you don`t have EOS, you can copy the invoice and send it to a friend who has EOS. <br>
+                                Or you can buy EOS at a variety of exchange offices.
+                            </p>
+                            <p>
+                                How to do this, watch the video.
+                            </p> -->
+                            <div class="payment-item__video-box video video_enabled">
+                                <a class="video__link" href="https://youtu.be/FJZtLvHtC5E">
+                                    <img class="video__media" src="img/video-img.png" alt="#">
+                                </a>
+                                <button class="video__button" aria-label="Play">
+                                    <svg width="68" height="48" viewBox="0 0 68 48">
+                                        <path class="video__button-shape"
+                                            d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z">
+                                        </path>
+                                        <path class="video__button-icon" d="M 45,24 27,14 27,34"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="payment-item__provider">
+                            <div class="payment-item__provider-title">
+                                <span>service provided</span>
+                                <span>by our partner</span>
+                            </div>
+                            <!-- <p class="payment-item__provider-text">Information provided by our partner</p> -->
+                            <a class="payment-item__provider-img" href="#"><img src="img/switcher.png" alt="Switcher"></a>
+                            <a class="payment-item__provider-link" href="https://switchere.com/">buy EOS in few minutes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer-payment">
+            <img src="img/logo.svg" alt="Logo">
+            <span class="footer-payment__copyright">2020 © <a class="notranslate" href="#">16Bit</a></span>
+        </footer>
+
+    </div>
+
+
+
+    <!-- jQuery -->
+    <script src="libs/jquery-3.4.1.min.js"></script>
+    <!-- jQuery UI -->
+    <script src="libs/jquery-ui.min.js"></script>
+    <script src="libs/jquery.ui.touch-punch.min.js"></script>
+    <!-- Slick -->
+    <script src="libs/slick.min.js"></script>
+    <!-- Clipboard -->
+    <script src="libs/clipboard.min.js"></script>
+    <!-- SCRIPTS -->
+    <script src="js/script.js"></script>
+
+    <script>
+        function googleTranslateElementInit2() { new google.translate.TranslateElement({ pageLanguage: 'en', autoDisplay: false }, 'google_translate_element2'); }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
+
+    <script>
+        // /* <![CDATA[ */
+        eval(function (p, a, c, k, e, r) { e = function (c) { return (c < a ? '' : e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(36)) }; if (!''.replace(/^/, String)) { while (c--) r[e(c)] = k[c] || e(c); k = [function (e) { return r[e] }]; e = function () { return '\\w+' }; c = 1 }; while (c--) if (k[c]) p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]); return p }('6 7(a,b){n{4(2.9){3 c=2.9("o");c.p(b,f,f);a.q(c)}g{3 c=2.r();a.s(\'t\'+b,c)}}u(e){}}6 h(a){4(a.8)a=a.8;4(a==\'\')v;3 b=a.w(\'|\')[1];3 c;3 d=2.x(\'y\');z(3 i=0;i<d.5;i++)4(d[i].A==\'B-C-D\')c=d[i];4(2.j(\'k\')==E||2.j(\'k\').l.5==0||c.5==0||c.l.5==0){F(6(){h(a)},G)}g{c.8=b;7(c,\'m\');7(c,\'m\')}}', 43, 43, '||document|var|if|length|function|GTranslateFireEvent|value|createEvent||||||true|else|doGTranslate||getElementById|google_translate_element2|innerHTML|change|try|HTMLEvents|initEvent|dispatchEvent|createEventObject|fireEvent|on|catch|return|split|getElementsByTagName|select|for|className|goog|te|combo|null|setTimeout|500'.split('|'), 0, {}))
+    // /* ]]> */
+    </script>
+</body>
+
+</html>
